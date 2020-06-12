@@ -1,0 +1,4 @@
+lib/app/shared/widgets/title/title_widget.dart
+test/app/shared/widgets/title/title_widget_test.dart
+lib/app/shared/widgets/title/title_controller.dart
+test/app/shared/widgets/title/title_controller_test.dart

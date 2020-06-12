@@ -1,0 +1,5 @@
+lib/app/modules/extrato_pontos/extrato_pontos_module.dart
+lib/app/modules/extrato_pontos/extrato_pontos_page.dart
+test/app/modules/extrato_pontos/extrato_pontos_page_test.dart
+lib/app/modules/extrato_pontos/extrato_pontos_controller.dart
+test/app/modules/extrato_pontos/extrato_pontos_controller_test.dart

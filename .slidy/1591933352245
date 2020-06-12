@@ -1,0 +1,4 @@
+lib/app/modules/home/indique_ganhe/indique_ganhe/indique_ganhe_widget.dart
+test/app/modules/home/indique_ganhe/indique_ganhe/indique_ganhe_widget_test.dart
+lib/app/modules/home/indique_ganhe/indique_ganhe/indique_ganhe_controller.dart
+test/app/modules/home/indique_ganhe/indique_ganhe/indique_ganhe_controller_test.dart

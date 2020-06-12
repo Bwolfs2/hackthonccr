@@ -1,0 +1,4 @@
+lib/app/shared/widgets/rounded_panel/rounded_panel_widget.dart
+test/app/shared/widgets/rounded_panel/rounded_panel_widget_test.dart
+lib/app/shared/widgets/rounded_panel/rounded_panel_controller.dart
+test/app/shared/widgets/rounded_panel/rounded_panel_controller_test.dart

@@ -1,0 +1,4 @@
+lib/app/modules/home/widgets/parceiro_caminhoneiro/parceiro_caminhoneiro/parceiro_caminhoneiro_widget.dart
+test/app/modules/home/widgets/parceiro_caminhoneiro/parceiro_caminhoneiro/parceiro_caminhoneiro_widget_test.dart
+lib/app/modules/home/widgets/parceiro_caminhoneiro/parceiro_caminhoneiro/parceiro_caminhoneiro_controller.dart
+test/app/modules/home/widgets/parceiro_caminhoneiro/parceiro_caminhoneiro/parceiro_caminhoneiro_controller_test.dart
