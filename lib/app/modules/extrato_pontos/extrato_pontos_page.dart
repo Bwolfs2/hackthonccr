@@ -7,6 +7,7 @@ import '../../shared/widgets/rounded_panel/rounded_panel_widget.dart';
 import 'widgets/item_acumulo_pontos/item_acumulo_pontos.dart';
 import '../../shared/widgets/pontuacao/pontuacao.dart';
 import 'widgets/selectable_label/selectable_label.dart';
+import '../../shared/widgets/meus_pontos/meus_pontos_widget.dart';
 
 class ExtratoPontosPage extends StatefulWidget {
   final String title;
@@ -44,42 +45,10 @@ class _ExtratoPontosPageState
             ],
             expandedHeight: 250.0,
             flexibleSpace: FlexibleSpaceBar(
-              background: Stack(
-                children: <Widget>[
-                  Positioned(
-                    right: 20,
-                    bottom: 20,
-                    child: Container(
-                      child: Image.network(
-                        "https://static.wixstatic.com/media/4865e6_e7da40899cb54b019273e36704546145~mv2.png/v1/fill/w_200,h_202,al_c,q_85,usm_0.66_1.00_0.01/porquinho-de-dinheiro-png.webp",
-                        width: 150,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 20,
-                    bottom: 20,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Pontuacao(
-                          icon: Icons.star,
-                          lvl: 5,
-                          pontos: "15.237 pontos",
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Pontuacao(
-                          icon: Icons.favorite,
-                          lvl: 5,
-                          pontos: "40.237 pontos de saúde",
-                        )
-                      ],
-                    ),
-                  )
-                ],
+              background: MeusPontosWidget(
+                assetImage: 'undraw_Savings_dwkw',
+                pontos: '15237',
+                pontosSaude: '40237',
               ),
             ),
           ),

@@ -1,6 +1,7 @@
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hackthonccr/app/modules/home/widgets/group_actions/group_actions/group_actions_widget.dart';
 
 import 'list_group_actions_controller.dart';
@@ -28,29 +29,32 @@ class _ListGroupActionsWidgetState
             expandIcon: Icons.accessibility,
             hasIcon: false,
           ),
-          header: IconButton(
-            onPressed: () {
-              controller.expandController.toggle();
-              setState(() {});
-            },
-            icon: controller.expandController.expanded
-                ? Icon(Icons.arrow_drop_up, size: 40)
-                : Icon(Icons.arrow_drop_down, size: 40),
+          header: Column(
+            children: <Widget>[
+              FlatButton(
+                onPressed: () {
+                  controller.expandController.toggle();
+                  setState(() {});
+                },
+                child: controller.expandController.expanded
+                    ? Column(
+                        children: <Widget>[
+                          Text("Toque para ver menos opções"),
+                          Icon(FontAwesomeIcons.chevronUp, size: 25),
+                        ],
+                      )
+                    : Column(
+                        children: <Widget>[
+                          Text("Toque para ver mais opções"),
+                          Icon(FontAwesomeIcons.chevronDown, size: 25),
+                        ],
+                      ),
+              ),
+            ],
           ),
           controller: controller.expandController,
           expanded: Column(
-            children: [
-              // IconButton(
-              //   onPressed: () {
-              //     controller.expandController.toggle();
-              //     setState(() {});
-              //   },
-              //   icon: controller.expandController.expanded
-              //       ? Icon(Icons.arrow_drop_up, size: 40)
-              //       : Icon(Icons.arrow_drop_down, size: 40),
-              // ),
-              ...widget.groups
-            ],
+            children: [...widget.groups],
           ),
         ),
       ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hackthonccr/app/shared/widgets/title/title_widget.dart';
 
 class ParceiroCaminhoneiroWidget extends StatelessWidget {
@@ -29,27 +30,27 @@ class ParceiroCaminhoneiroWidget extends StatelessWidget {
                 SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
             children: <Widget>[
               ItemParceiroCaminhoneiro(
-                icon: Icons.account_box,
+                icon: FontAwesomeIcons.gasPump,
                 label: "Abastecer",
               ),
               ItemParceiroCaminhoneiro(
-                icon: Icons.account_box,
+                icon: FontAwesomeIcons.bed,
                 label: "Dormir",
               ),
               ItemParceiroCaminhoneiro(
-                icon: Icons.account_box,
+                icon: FontAwesomeIcons.couch,
                 label: "Relaxar",
               ),
               ItemParceiroCaminhoneiro(
-                icon: Icons.account_box,
+                icon: FontAwesomeIcons.warehouse,
                 label: "Estacionar",
               ),
               ItemParceiroCaminhoneiro(
-                icon: Icons.account_box,
+                icon: FontAwesomeIcons.utensils,
                 label: "Alimentar",
               ),
               ItemParceiroCaminhoneiro(
-                icon: Icons.account_box,
+                icon: FontAwesomeIcons.dumbbell,
                 label: "Exercitar",
               ),
             ],
@@ -80,7 +81,11 @@ class ParceiroCaminhoneiroWidget extends StatelessWidget {
                   ),
                 ),
                 CircleAvatar(
-                  child: Icon(Icons.phone_in_talk),
+                  backgroundColor: Colors.black26,
+                  child: Icon(
+                    FontAwesomeIcons.whatsapp,
+                    color: Colors.black87,
+                  ),
                 )
               ],
             ),
@@ -105,8 +110,13 @@ class ItemParceiroCaminhoneiro extends StatelessWidget {
       child: Column(
         children: <Widget>[
           CircleAvatar(
-            child: Icon(icon),
-            radius: 30,
+            backgroundColor: Color(0xff4D0000),
+            child: Icon(
+              icon,
+              size: 35,
+              color: Colors.white,
+            ),
+            radius: 40,
           ),
           SizedBox(
             height: 10,

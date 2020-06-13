@@ -5,13 +5,21 @@ import 'package:hackthonccr/app/modules/home/home_module.dart';
 import 'package:hasura_connect/hasura_connect.dart';
 
 import 'app_controller.dart';
+import 'modules/checkin/checkin_module.dart';
 import 'modules/extrato_pontos/extrato_pontos_module.dart';
 import 'modules/indicar_motorista/indicar_motorista_module.dart';
+import 'modules/meus_vouchers/meus_vouchers_module.dart';
 import 'modules/ranking/ranking_module.dart';
+import 'modules/trocar_pontos/trocar_pontos_module.dart';
+import 'modules/pagar/pagar_module.dart';
+import 'modules/receber/receber_module.dart';
+import 'modules/extrato_carteira/extrato_carteira_module.dart';
+import 'shared/widgets/meus_pontos/meus_pontos_controller.dart';
 
 class AppModule extends MainModule {
   @override
   List<Bind> get binds => [
+        Bind((i) => MeusPontosController()),
         Bind(
           (i) => AppController(),
         ),
@@ -26,6 +34,12 @@ class AppModule extends MainModule {
         Router("/extratoPontos", module: ExtratoPontosModule()),
         Router("/indicarMotorista", module: IndicarMotoristaModule()),
         Router("/ranking", module: RankingModule()),
+        Router("/checkin", module: CheckinModule()),
+        Router("/trocarPontos", module: TrocarPontosModule()),
+        Router("/meusVouchers", module: MeusVouchersModule()),
+        Router("/pagar", module: PagarModule()),
+        Router("/receber", module: ReceberModule()),
+        Router("/extratoCarteira", module: ExtratoCarteiraModule()),
       ];
 
   @override

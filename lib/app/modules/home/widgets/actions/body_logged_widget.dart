@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hackthonccr/app/modules/home/models/action_model.dart';
 import 'package:hackthonccr/app/modules/home/widgets/current_jorney/current_jorney/current_jorney_widget.dart';
 import 'package:hackthonccr/app/modules/home/widgets/group_actions/group_actions/group_actions_widget.dart';
@@ -33,56 +34,75 @@ class _BodyLoggedWidgetState
             GroupActionsWidget(
               title: "Meus Pontos",
               itemsActions: [
-                ActionModel("Extrato de Pontos", Icons.access_alarm, () {
+                ActionModel("Extrato de Pontos", FontAwesomeIcons.receipt, () {
                   Modular.to.pushNamed("/extratoPontos");
                 }),
-                ActionModel("Indicar e Ganhar", Icons.access_alarm, () {
+                ActionModel("Indicar e Ganhar", FontAwesomeIcons.slideshare,
+                    () {
                   Modular.to.pushNamed("/indicarMotorista");
                 }),
-                ActionModel("Ranking", Icons.access_alarm, () {
+                ActionModel("Ranking", FontAwesomeIcons.award, () {
                   Modular.to.pushNamed("/ranking");
                 }),
-                ActionModel("Check-in", Icons.access_alarm, () {}),
-                ActionModel("Trocar Pontos", Icons.access_alarm, () {}),
-                ActionModel("Meus Vouchers", Icons.access_alarm, () {}),
+                ActionModel("Check-in", FontAwesomeIcons.flagCheckered, () {
+                  Modular.to.pushNamed("/checkin");
+                }),
+                ActionModel("Trocar Pontos", FontAwesomeIcons.exchangeAlt, () {
+                  Modular.to.pushNamed("/trocarPontos");
+                }),
+                ActionModel("Meus Vouchers", FontAwesomeIcons.pager, () {
+                  Modular.to.pushNamed("/meusVouchers");
+                }),
               ],
             ),
             GroupActionsWidget(
               title: "Carteira",
               itemsActions: [
-                ActionModel("Pagar", Icons.access_alarm, () {}),
-                ActionModel("Receber", Icons.access_alarm, () {}),
-                ActionModel("Extrato", Icons.access_alarm, () {}),
+                ActionModel("Pagar", FontAwesomeIcons.qrcode, () {
+                  Modular.to.pushNamed("/pagar");
+                }),
+                ActionModel("Receber", FontAwesomeIcons.handHoldingUsd, () {
+                  Modular.to.pushNamed("/receber");
+                }),
+                ActionModel("Extrato", FontAwesomeIcons.fileInvoiceDollar, () {
+                  Modular.to.pushNamed("/extratoCarteira");
+                }),
               ],
             ),
             GroupActionsWidget(
               title: "Minhas Viagens",
               itemsActions: [
-                ActionModel("Jornada", Icons.access_alarm, () {}),
-                ActionModel("SAU CCR", Icons.access_alarm, () {}),
-                ActionModel("WIFI", Icons.access_alarm, () {}),
+                ActionModel("Jornada", FontAwesomeIcons.truckMoving, () {}),
+                ActionModel("SAU CCR", FontAwesomeIcons.home, () {}),
+                ActionModel("WIFI", FontAwesomeIcons.wifi, () {}),
               ],
             ),
             GroupActionsWidget(
               title: "Bem Estar e Saúde",
               itemsActions: [
-                ActionModel("Tele-Medicina", Icons.access_alarm, () {}),
-                ActionModel("Agendamentos", Icons.access_alarm, () {}),
-                ActionModel("Exames", Icons.access_alarm, () {}),
-                ActionModel("Minha Saude", Icons.access_alarm, () {}),
-                ActionModel("Diario", Icons.access_alarm, () {}),
-                ActionModel("Sono", Icons.access_alarm, () {}),
-                ActionModel("Medicação", Icons.access_alarm, () {}),
-                ActionModel("Hidatação", Icons.access_alarm, () {}),
-                ActionModel("Presencial", Icons.access_alarm, () {}),
+                ActionModel(
+                    "Tele-Medicina", FontAwesomeIcons.laptopMedical, () {}),
+                ActionModel(
+                    "Agendamentos", FontAwesomeIcons.calendarPlus, () {}),
+                ActionModel("Exames", FontAwesomeIcons.xRay, () {}),
+                ActionModel("Minha Saude", Icons.favorite, () {}),
+                ActionModel("Diario", FontAwesomeIcons.calendar, () {}),
+                ActionModel("Sono", FontAwesomeIcons.bed, () {}),
+                ActionModel("Medicação", FontAwesomeIcons.pills, () {}),
+                ActionModel("Atendimento Presencial",
+                    FontAwesomeIcons.clinicMedical, () {}),
+                ActionModel(
+                    "Contato de Emergência", FontAwesomeIcons.ambulance, () {}),
               ],
             ),
             GroupActionsWidget(
               title: "Entretenimento",
               itemsActions: [
-                ActionModel("Estradas do Brasil", Icons.access_alarm, () {}),
-                ActionModel("Mande um Recado", Icons.access_alarm, () {}),
-                ActionModel("Aprenda", Icons.access_alarm, () {}),
+                ActionModel("Estradas do Brasil", FontAwesomeIcons.road, () {}),
+                ActionModel(
+                    "Mande um Recado", FontAwesomeIcons.paperPlane, () {}),
+                ActionModel(
+                    "Aprenda", FontAwesomeIcons.chalkboardTeacher, () {}),
               ],
             ),
           ],

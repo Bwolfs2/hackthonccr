@@ -46,12 +46,12 @@ class _IndicarMotoristaPageState
               background: Stack(
                 children: <Widget>[
                   Positioned(
-                    right: 20,
+                    right: 0,
                     bottom: 20,
                     child: Container(
-                      child: Image.network(
-                        "https://static.wixstatic.com/media/4865e6_e7da40899cb54b019273e36704546145~mv2.png/v1/fill/w_200,h_202,al_c,q_85,usm_0.66_1.00_0.01/porquinho-de-dinheiro-png.webp",
-                        width: 150,
+                      child: Image.asset(
+                        "assets/social sharing.png",
+                        width: 220,
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -73,16 +73,14 @@ class _IndicarMotoristaPageState
                           ),
                         ),
                         SizedBox(
-                          height: 20,
+                          height: 30,
                         ),
                         Container(
-                          width: MediaQuery.of(context).size.width * .6,
+                          width: MediaQuery.of(context).size.width * .5,
                           child: RichText(
                             text: TextSpan(
-                              // Note: Styles for TextSpans must be explicitly defined.
-                              // Child text spans will inherit styles from parent
                               style: TextStyle(
-                                fontSize: 14.0,
+                                fontSize: 13.0,
                                 color: Colors.black,
                               ),
                               children: <TextSpan>[
@@ -126,7 +124,7 @@ class _IndicarMotoristaPageState
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                         SizedBox(
-                          height: 30,
+                          height: 20,
                         ),
                       ],
                     ),
@@ -181,13 +179,13 @@ class _IndicarMotoristaPageState
                     ),
                     RoundedPanelWidget(
                       child: Stack(
+                        alignment: Alignment.topCenter,
                         children: <Widget>[
                           Positioned(
                             bottom: 0,
-                            right: 0,
-                            child: Image.network(
-                              "https://www.medley.com.br/-/media/EMS/Conditions/Generics/Brands/Medley/Depressao/depressao-caminhos-ajudar-pessoa-depresso-2.png?h=1033&la=pt-BR&w=1512&hash=45180EA38F629FF84962EFBA75E2817123F4AA62",
-                              width: 250,
+                            child: Image.asset(
+                              "assets/healty option.png",
+                              width: 230,
                             ),
                           ),
                           Column(

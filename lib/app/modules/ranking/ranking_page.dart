@@ -1,9 +1,14 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:hackthonccr/app/modules/extrato_pontos/widgets/selectable_label/selectable_label.dart';
+import 'package:hackthonccr/app/shared/widgets/meus_pontos/meus_pontos_widget.dart';
 import 'package:hackthonccr/app/shared/widgets/rounded_panel/rounded_panel_widget.dart';
 import 'package:hackthonccr/app/shared/widgets/title/title_widget.dart';
 import 'ranking_controller.dart';
 import '../../shared/widgets/pontuacao/pontuacao.dart';
+import 'models/ranking_model.dart';
 
 class RankingPage extends StatefulWidget {
   final String title;
@@ -41,46 +46,14 @@ class _RankingPageState extends ModularState<RankingPage, RankingController> {
             ],
             expandedHeight: 250.0,
             flexibleSpace: FlexibleSpaceBar(
-              background: Stack(
-                children: <Widget>[
-                  Positioned(
-                    right: 20,
-                    bottom: 20,
-                    child: Container(
-                      child: Image.network(
-                        "https://static.wixstatic.com/media/4865e6_e7da40899cb54b019273e36704546145~mv2.png/v1/fill/w_200,h_202,al_c,q_85,usm_0.66_1.00_0.01/porquinho-de-dinheiro-png.webp",
-                        width: 150,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 20,
-                    bottom: 20,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Text("Você:"),
-                        Pontuacao(
-                          icon: Icons.star,
-                          lvl: 5,
-                          pontos: "15.237 pontos",
-                          posicao: 14,
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Pontuacao(
-                          icon: Icons.favorite,
-                          lvl: 5,
-                          pontos: "40.237 pontos de saúde",
-                          posicao: 14,
-                        )
-                      ],
-                    ),
-                  )
-                ],
-              ),
+              ///winners.png
+              background: MeusPontosWidget(
+                  assetImage: 'winners',
+                  pontos: '15237',
+                  pontosSaude: '40237',
+                  showVoce: true,
+                  position: 14,
+                  positionSaude: 14),
             ),
           ),
           // Not affecting the question.
@@ -134,7 +107,146 @@ class _RankingPageState extends ModularState<RankingPage, RankingController> {
                                   )
                                 ],
                               ),
-                              RankingView()
+                              Observer(builder: (_) {
+                                return Row(
+                                  children: <Widget>[
+                                    SelectableLabel(
+                                      label: 'Acumulado',
+                                      action: () {
+                                        controller
+                                            .setSelectedLabel("Acumulado");
+                                      },
+                                      isSelected: controller.selectedLabel ==
+                                          "Acumulado",
+                                    ),
+                                    SelectableLabel(
+                                      label: 'Mensal',
+                                      action: () {
+                                        controller.setSelectedLabel("Mensal");
+                                      },
+                                      isSelected:
+                                          controller.selectedLabel == "Mensal",
+                                    ),
+                                  ],
+                                );
+                              }),
+                              Container(
+                                height: 710,
+                                child: PageView(
+                                  controller: controller.pageViewController,
+                                  physics: NeverScrollableScrollPhysics(),
+                                  children: <Widget>[
+                                    RankingView(
+                                      lista: [
+                                        RankingModel(
+                                          nome: "Vilson B",
+                                          pontuacao: 833587,
+                                          position: 1,
+                                        ),
+                                        RankingModel(
+                                          nome: "Filipo Peter",
+                                          pontuacao: 730587,
+                                          position: 2,
+                                        ),
+                                        RankingModel(
+                                          nome: "Tuca Silva",
+                                          pontuacao: 627222,
+                                          position: 3,
+                                        ),
+                                        RankingModel(
+                                          nome: "Frank dos Reis",
+                                          pontuacao: 626222,
+                                          position: 4,
+                                        ),
+                                        RankingModel(
+                                          nome: "Alisson",
+                                          pontuacao: 625223,
+                                          position: 5,
+                                        ),
+                                        RankingModel(
+                                          nome: "Bwolf",
+                                          pontuacao: 525222,
+                                          position: 6,
+                                        ),
+                                        RankingModel(
+                                          nome: "Jorge do Truck",
+                                          pontuacao: 522322,
+                                          position: 7,
+                                        ),
+                                        RankingModel(
+                                          nome: "Tico das Asas",
+                                          pontuacao: 422227,
+                                          position: 8,
+                                        ),
+                                        RankingModel(
+                                          nome: "Joao Viajador",
+                                          pontuacao: 322222,
+                                          position: 9,
+                                        ),
+                                        RankingModel(
+                                          nome: "Tiaguinho",
+                                          pontuacao: 120035,
+                                          position: 10,
+                                        ),
+                                      ],
+                                    ),
+                                    RankingView(
+                                      lista: [
+                                        RankingModel(
+                                          nome: "Vilson B",
+                                          pontuacao: 33587,
+                                          position: 1,
+                                        ),
+                                        RankingModel(
+                                          nome: "Filipo Peter",
+                                          pontuacao: 30587,
+                                          position: 2,
+                                        ),
+                                        RankingModel(
+                                          nome: "Tuca Silva",
+                                          pontuacao: 27222,
+                                          position: 3,
+                                        ),
+                                        RankingModel(
+                                          nome: "Frank dos Reis",
+                                          pontuacao: 26222,
+                                          position: 4,
+                                        ),
+                                        RankingModel(
+                                          nome: "Alisson",
+                                          pontuacao: 25223,
+                                          position: 5,
+                                        ),
+                                        RankingModel(
+                                          nome: "Bwolf",
+                                          pontuacao: 25222,
+                                          position: 6,
+                                        ),
+                                        RankingModel(
+                                          nome: "Jorge do Truck",
+                                          pontuacao: 22322,
+                                          position: 7,
+                                        ),
+                                        RankingModel(
+                                          nome: "Tico das Asas",
+                                          pontuacao: 22227,
+                                          position: 8,
+                                        ),
+                                        RankingModel(
+                                          nome: "Joao Viajador",
+                                          pontuacao: 22222,
+                                          position: 9,
+                                        ),
+                                        RankingModel(
+                                          nome: "Tiaguinho",
+                                          pontuacao: 20035,
+                                          position: 10,
+                                        ),
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              )
                             ],
                           ),
                         ],
@@ -152,6 +264,10 @@ class _RankingPageState extends ModularState<RankingPage, RankingController> {
 }
 
 class RankingView extends StatelessWidget {
+  final List<RankingModel> lista;
+
+  const RankingView({Key key, @required this.lista}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -180,8 +296,9 @@ class RankingView extends StatelessWidget {
                       SizedBox(
                         height: 10,
                       ),
-                      Text(
-                        "33.587",
+                      AutoSizeText(
+                        "${lista[1].pontuacao}",
+                        maxLines: 1,
                         style: TextStyle(fontSize: 18),
                       )
                     ],
@@ -206,7 +323,7 @@ class RankingView extends StatelessWidget {
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 5, bottom: 5),
-                        child: Text("Filipo Peter"),
+                        child: Text("${lista[1].nome}"),
                       )
                     ],
                   ),
@@ -218,7 +335,7 @@ class RankingView extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   Text(
-                    "Vilson B.",
+                    "${lista[0].nome}",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
@@ -244,8 +361,9 @@ class RankingView extends StatelessWidget {
                             SizedBox(
                               height: 10,
                             ),
-                            Text(
-                              "33.587",
+                            AutoSizeText(
+                              "${lista[0].pontuacao}",
+                              maxLines: 1,
                               style: TextStyle(fontSize: 20),
                             )
                           ],
@@ -295,8 +413,9 @@ class RankingView extends StatelessWidget {
                       SizedBox(
                         height: 10,
                       ),
-                      Text(
-                        "33.587",
+                      AutoSizeText(
+                        "${lista[2].pontuacao}",
+                        maxLines: 1,
                         style: TextStyle(fontSize: 18),
                       )
                     ],
@@ -310,7 +429,7 @@ class RankingView extends StatelessWidget {
                     children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.only(left: 5, bottom: 5),
-                        child: Text("Tuca Silva"),
+                        child: Text("${lista[2].nome}"),
                       ),
                       CircleAvatar(
                         backgroundColor: Colors.black,
@@ -336,7 +455,7 @@ class RankingView extends StatelessWidget {
         ListView.builder(
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
-            itemCount: 5,
+            itemCount: lista.length - 3,
             itemBuilder: (_, index) {
               return ListTile(
                 leading: CircleAvatar(
@@ -357,9 +476,9 @@ class RankingView extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20)),
                   child: Row(
                     children: <Widget>[
-                      Expanded(child: Text("Usuario $index")),
+                      Expanded(child: Text("${lista[index + 3].nome}")),
                       Text(
-                        "${1247 * (index + 1)}",
+                        "${lista[index + 3].pontuacao}",
                         style: TextStyle(fontWeight: FontWeight.w600),
                       ),
                     ],

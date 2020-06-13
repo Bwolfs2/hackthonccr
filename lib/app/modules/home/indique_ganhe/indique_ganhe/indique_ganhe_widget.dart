@@ -58,7 +58,7 @@ class _IndiqueGanheWidgetState
                       fontWeight: FontWeight.w500,
                     ),
                   ),
-                )
+                ),
               ],
             ),
           )

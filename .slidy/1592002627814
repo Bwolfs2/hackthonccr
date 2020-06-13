@@ -1,0 +1,7 @@
+lib/app/modules/trocar_pontos/trocar_pontos_module.dart
+lib/app/modules/trocar_pontos/trocar_pontos_page.dart
+test/app/modules/trocar_pontos/trocar_pontos_page_test.dart
+lib/app/modules/trocar_pontos/repositories/trocar_pontos_repository.dart
+lib/app/modules/trocar_pontos/trocar_pontos_controller.dart
+test/app/modules/trocar_pontos/repositories/trocar_pontos_repository_test.dart
+test/app/modules/trocar_pontos/trocar_pontos_controller_test.dart

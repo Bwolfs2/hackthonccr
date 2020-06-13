@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'header_controller.dart';
 
@@ -34,12 +35,18 @@ class _HeaderWidgetState extends ModularState<HeaderWidget, HeaderController> {
                 controller: controller,
               ),
               Spacer(),
-              Text("Como você está se\nsentindo agora?"),
+              Text(
+                "Como você está se\nsentindo agora?",
+                style: TextStyle(
+                  fontSize: 14,
+                ),
+              ),
               Padding(
                 padding: const EdgeInsets.only(left: 5),
-                child: CircleAvatar(
-                  radius: 15,
-                  backgroundColor: Colors.black45,
+                child: Icon(
+                  FontAwesomeIcons.laugh,
+                  color: Colors.green,
+                  size: 40,
                 ),
               )
             ],

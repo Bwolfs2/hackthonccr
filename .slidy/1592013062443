@@ -1,0 +1,7 @@
+lib/app/modules/pagar/pagar_module.dart
+lib/app/modules/pagar/pagar_page.dart
+test/app/modules/pagar/pagar_page_test.dart
+lib/app/modules/pagar/repositories/pagar_repository.dart
+lib/app/modules/pagar/pagar_controller.dart
+test/app/modules/pagar/repositories/pagar_repository_test.dart
+test/app/modules/pagar/pagar_controller_test.dart

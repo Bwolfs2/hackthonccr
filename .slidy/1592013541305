@@ -1,0 +1,7 @@
+lib/app/modules/extrato_carteira/extrato_carteira_module.dart
+lib/app/modules/extrato_carteira/extrato_carteira_page.dart
+test/app/modules/extrato_carteira/extrato_carteira_page_test.dart
+lib/app/modules/extrato_carteira/repositories/extrato_carteira_repository.dart
+lib/app/modules/extrato_carteira/extrato_carteira_controller.dart
+test/app/modules/extrato_carteira/repositories/extrato_carteira_repository_test.dart
+test/app/modules/extrato_carteira/extrato_carteira_controller_test.dart

@@ -50,7 +50,12 @@ class GroupActionsWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       CircleAvatar(
-                        child: Icon(actionModel.icon),
+                        child: Icon(
+                          actionModel.icon,
+                          color: Colors.black87,
+                          size: 25,
+                        ),
+                        backgroundColor: Colors.black26,
                         radius: 25,
                       ),
                       SizedBox(

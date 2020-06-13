@@ -37,7 +37,7 @@ class Pontuacao extends StatelessWidget {
             fontWeight: FontWeight.w500,
           ),
         ),
-        if (posicao != null) Text("$posicao °")
+        if (posicao != null) Text("$posicao°")
       ],
     );
   }
