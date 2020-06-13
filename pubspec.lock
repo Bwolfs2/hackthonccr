@@ -471,13 +471,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.4.0"
-  pin_view:
+  pin_code_text_field:
     dependency: "direct main"
     description:
-      name: pin_view
+      name: pin_code_text_field
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.1"
+    version: "1.6.0"
   platform:
     dependency: transitive
     description:
@@ -588,13 +588,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.99"
-  sms:
-    dependency: transitive
-    description:
-      name: sms
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.2.4"
   source_gen:
     dependency: transitive
     description:

@@ -114,12 +114,9 @@ class _PagarPageState extends ModularState<PagarPage, PagarController> {
                               children: <Widget>[
                                 InkWell(
                                   onTap: () async {
-                                    //var result = await BarcodeScanner.scan();
-                                    if (1 == 1
-                                        //  ||
-                                        //     result.rawContent != null &&
-                                        //         result.rawContent.trim() != ''
-                                        ) {
+                                    var result = await BarcodeScanner.scan();
+                                    if (result.rawContent != null &&
+                                        result.rawContent.trim() != '') {
                                       Modular.link.pushNamed("/confirmacao");
                                     } else {
                                       asuka.showSnackBar(

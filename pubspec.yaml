@@ -21,7 +21,7 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:  
-  pin_view: ^1.0.1  
+  pin_code_text_field: ^1.6.0
   asuka: ^1.0.0
   barcode_scan: ^3.0.1
   auto_size_text: ^2.1.0
