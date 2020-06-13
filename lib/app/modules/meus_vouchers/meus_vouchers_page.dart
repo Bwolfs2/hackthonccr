@@ -33,15 +33,7 @@ class _MeusVouchersPageState
                 fontSize: 25,
               ),
             ),
-            actions: <Widget>[
-              IconButton(
-                icon: Icon(
-                  Icons.shopping_cart,
-                ),
-                onPressed: () {},
-              ),
-            ],
-            expandedHeight: 250.0,
+            expandedHeight: 270.0,
             flexibleSpace: FlexibleSpaceBar(
               background: Stack(
                 alignment: Alignment.center,

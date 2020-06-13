@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:hackthonccr/app/modules/home/models/action_model.dart';
 import 'package:hackthonccr/app/shared/widgets/title/title_widget.dart';
@@ -23,14 +24,14 @@ class GroupActionsWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          TitleWidget(title),
+          TitleWidget(title, color: Colors.red),
           GridView.builder(
             itemCount: itemsActions?.length ?? 0,
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 3,
-              childAspectRatio: .9,
+              childAspectRatio: .8,
             ),
             itemBuilder: (context, index) {
               var actionModel = itemsActions[index];
@@ -61,8 +62,9 @@ class GroupActionsWidget extends StatelessWidget {
                       SizedBox(
                         height: 10,
                       ),
-                      Text(
+                      AutoSizeText(
                         actionModel.label,
+                        maxLines: 2,
                         textAlign: TextAlign.center,
                       )
                     ],

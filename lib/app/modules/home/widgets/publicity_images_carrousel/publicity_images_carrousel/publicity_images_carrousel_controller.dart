@@ -22,11 +22,14 @@ abstract class _PublicityImagesCarrouselControllerBase with Store {
       }
     });
 
-    images = await publicityRepository.getPublicityImages();
+    // images = await publicityRepository.getPublicityImages();
   }
 
   @observable
-  List<PublicityImageModel> images;
+  List<PublicityImageModel> images = [
+    PublicityImageModel(asset: "assets/publicidade2_980x528.png"),
+    PublicityImageModel(asset: "assets/publicidade_980x528 (2).png"),
+  ];
 
   final pageController = PageController(initialPage: 0);
 

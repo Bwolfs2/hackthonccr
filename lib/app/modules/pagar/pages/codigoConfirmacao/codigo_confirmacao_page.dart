@@ -24,7 +24,7 @@ class _CodigoConfirmacaoPageState
         SliverAppBar(
           pinned: true,
           centerTitle: true,
-          expandedHeight: 90,
+          expandedHeight: 70,
         ),
         SliverToBoxAdapter(
           child: Container(

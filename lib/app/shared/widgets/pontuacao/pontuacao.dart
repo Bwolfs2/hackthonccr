@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class Pontuacao extends StatelessWidget {
   final int lvl;
   final String pontos;
-  final IconData icon;
+  final Widget icon;
   final int posicao;
 
   const Pontuacao(
@@ -23,11 +24,17 @@ class Pontuacao extends StatelessWidget {
         Row(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget>[
-            Icon(
-              icon,
-              size: 30,
+            icon,
+            SizedBox(
+              width: 5,
             ),
-            Text("Nível $lvl"),
+            Text(
+              "Nível $lvl",
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ],
         ),
         Text(
@@ -35,6 +42,7 @@ class Pontuacao extends StatelessWidget {
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.w500,
+            color: Colors.red,
           ),
         ),
         if (posicao != null) Text("$posicao°")

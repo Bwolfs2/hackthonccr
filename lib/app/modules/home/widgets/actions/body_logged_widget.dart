@@ -72,7 +72,9 @@ class _BodyLoggedWidgetState
             GroupActionsWidget(
               title: "Minhas Viagens",
               itemsActions: [
-                ActionModel("Jornada", FontAwesomeIcons.truckMoving, () {}),
+                ActionModel("Jornada", FontAwesomeIcons.truckMoving, () {
+                  Modular.to.pushNamed("/jornada");
+                }),
                 ActionModel("SAU CCR", FontAwesomeIcons.home, () {}),
                 ActionModel("WIFI", FontAwesomeIcons.wifi, () {}),
               ],

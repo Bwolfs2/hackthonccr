@@ -79,37 +79,37 @@ class SaldoPontosWidget extends StatelessWidget {
                 children: <Widget>[
                   Text("Saldo de Pontos"),
                   Text(
-                    "15.237 pontos",
+                    "15.237 Journis",
                     style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w500,
-                    ),
+                        fontSize: 20,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.red),
                   )
                 ],
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text("Saldo de Stars"),
+                  Text("Pontos Saúde"),
                   Text(
-                    "17 star",
+                    "5.570 pontos",
                     style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w500,
-                    ),
+                        fontSize: 20,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.red),
                   )
                 ],
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text("Saldo diamantes"),
+                  Text("Saldo Carteira"),
                   Text(
-                    "230 diamantes",
+                    "R\$ 230,00",
                     style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w500,
-                    ),
+                        fontSize: 20,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.red),
                   )
                 ],
               )

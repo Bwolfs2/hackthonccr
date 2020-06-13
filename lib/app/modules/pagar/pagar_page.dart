@@ -33,15 +33,15 @@ class _PagarPageState extends ModularState<PagarPage, PagarController> {
                 fontSize: 25,
               ),
             ),
-            actions: <Widget>[
-              IconButton(
-                icon: Icon(
-                  Icons.shopping_cart,
-                ),
-                onPressed: () {},
-              ),
-            ],
-            expandedHeight: 250.0,
+            // actions: <Widget>[
+            //   IconButton(
+            //     icon: Icon(
+            //       Icons.shopping_cart,
+            //     ),
+            //     onPressed: () {},
+            //   ),
+            // ],
+            expandedHeight: 270.0,
             flexibleSpace: FlexibleSpaceBar(
               background: Stack(
                 alignment: Alignment.center,
@@ -115,6 +115,7 @@ class _PagarPageState extends ModularState<PagarPage, PagarController> {
                                 InkWell(
                                   onTap: () async {
                                     var result = await BarcodeScanner.scan();
+                                    print(result);
                                     if (result.rawContent != null &&
                                         result.rawContent.trim() != '') {
                                       Modular.link.pushNamed("/confirmacao");

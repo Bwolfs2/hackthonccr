@@ -9,18 +9,19 @@ part of 'extrato_carteira_controller.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$ExtratoCarteiraController on _ExtratoCarteiraControllerBase, Store {
-  final _$valueAtom = Atom(name: '_ExtratoCarteiraControllerBase.value');
+  final _$selectedLabelAtom =
+      Atom(name: '_ExtratoCarteiraControllerBase.selectedLabel');
 
   @override
-  int get value {
-    _$valueAtom.reportRead();
-    return super.value;
+  String get selectedLabel {
+    _$selectedLabelAtom.reportRead();
+    return super.selectedLabel;
   }
 
   @override
-  set value(int value) {
-    _$valueAtom.reportWrite(value, super.value, () {
-      super.value = value;
+  set selectedLabel(String value) {
+    _$selectedLabelAtom.reportWrite(value, super.selectedLabel, () {
+      super.selectedLabel = value;
     });
   }
 
@@ -28,11 +29,11 @@ mixin _$ExtratoCarteiraController on _ExtratoCarteiraControllerBase, Store {
       ActionController(name: '_ExtratoCarteiraControllerBase');
 
   @override
-  void increment() {
+  void setSelectedLabel(String _selectedLabel) {
     final _$actionInfo = _$_ExtratoCarteiraControllerBaseActionController
-        .startAction(name: '_ExtratoCarteiraControllerBase.increment');
+        .startAction(name: '_ExtratoCarteiraControllerBase.setSelectedLabel');
     try {
-      return super.increment();
+      return super.setSelectedLabel(_selectedLabel);
     } finally {
       _$_ExtratoCarteiraControllerBaseActionController.endAction(_$actionInfo);
     }
@@ -41,7 +42,7 @@ mixin _$ExtratoCarteiraController on _ExtratoCarteiraControllerBase, Store {
   @override
   String toString() {
     return '''
-value: ${value}
+selectedLabel: ${selectedLabel}
     ''';
   }
 }

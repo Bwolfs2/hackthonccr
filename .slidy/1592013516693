@@ -1,7 +1,0 @@
-lib/app/modules/receber/receber_module.dart
-lib/app/modules/receber/receber_page.dart
-test/app/modules/receber/receber_page_test.dart
-lib/app/modules/receber/repositories/receber_repository.dart
-lib/app/modules/receber/receber_controller.dart
-test/app/modules/receber/repositories/receber_repository_test.dart
-test/app/modules/receber/receber_controller_test.dart

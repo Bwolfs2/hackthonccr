@@ -36,15 +36,15 @@ class _TrocarPontosPageState
                 fontSize: 25,
               ),
             ),
-            actions: <Widget>[
-              IconButton(
-                icon: Icon(
-                  Icons.shopping_cart,
-                ),
-                onPressed: () {},
-              ),
-            ],
-            expandedHeight: 250.0,
+            // actions: <Widget>[
+            //   IconButton(
+            //     icon: Icon(
+            //       Icons.shopping_cart,
+            //     ),
+            //     onPressed: () {},
+            //   ),
+            // ],
+            expandedHeight: 270.0,
             flexibleSpace: FlexibleSpaceBar(
               background: MeusPontosWidget(
                 assetImage: 'send gift',

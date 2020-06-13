@@ -28,7 +28,7 @@ class _ConfirmacaoPageState
                 fontSize: 25,
               ),
             ),
-            expandedHeight: 90,
+            expandedHeight: 70,
           ),
           SliverToBoxAdapter(
             child: Material(

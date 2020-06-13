@@ -14,6 +14,7 @@ class ParceiroCaminhoneiroWidget extends StatelessWidget {
         children: <Widget>[
           TitleWidget(
             "Parceiro Caminhoneiro",
+            color: Colors.red,
           ),
           Padding(
             padding: const EdgeInsets.only(left: 10, right: 10),

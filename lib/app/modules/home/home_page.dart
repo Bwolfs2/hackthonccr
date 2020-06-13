@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hackthonccr/app/modules/home/header/header/header_widget.dart';
 import 'home_controller.dart';
 import 'indique_ganhe/indique_ganhe/indique_ganhe_widget.dart';
@@ -33,16 +34,25 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
                     children: <Widget>[
                       IconButton(
                           icon: Icon(FontAwesomeIcons.bars), onPressed: () {}),
+                      Expanded(
+                        child: Text(
+                          "Journi",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.fredokaOne(
+                            fontSize: 30,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 60,
+                      )
                     ],
                   ),
                   HeaderWidget(),
                   BodyLoggedWidget(),
                   ParceiroCaminhoneiroWidget(),
                   IndiqueGanheWidget(),
-                  Container(
-                    height: 110,
-                    color: Colors.white,
-                  )
                 ],
               ),
             ),
@@ -79,10 +89,22 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Icon(
-                  FontAwesomeIcons.lifeRing,
-                  size: 60,
-                  color: Colors.red,
+                Stack(
+                  alignment: Alignment.center,
+                  children: <Widget>[
+                    CircleAvatar(
+                      radius: 30,
+                      backgroundColor: Colors.red,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 5),
+                      child: Icon(
+                        FontAwesomeIcons.lifeRing,
+                        size: 45,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
                 )
               ],
             ),

@@ -39,13 +39,19 @@ class _ListGroupActionsWidgetState
                 child: controller.expandController.expanded
                     ? Column(
                         children: <Widget>[
-                          Text("Toque para ver menos opções"),
+                          Text(
+                            "toque para ver menos opções",
+                            style: TextStyle(color: Colors.red),
+                          ),
                           Icon(FontAwesomeIcons.chevronUp, size: 25),
                         ],
                       )
                     : Column(
                         children: <Widget>[
-                          Text("Toque para ver mais opções"),
+                          Text(
+                            "toque para ver mais opções",
+                            style: TextStyle(color: Colors.red),
+                          ),
                           Icon(FontAwesomeIcons.chevronDown, size: 25),
                         ],
                       ),

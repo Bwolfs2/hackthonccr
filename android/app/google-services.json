@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "479843936652",
+    "firebase_url": "https://hackathonccr-bce88.firebaseio.com",
+    "project_id": "hackathonccr-bce88",
+    "storage_bucket": "hackathonccr-bce88.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:479843936652:android:3b8f17978b2f22b157cea9",
+        "android_client_info": {
+          "package_name": "br.journi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "479843936652-a1ackso4294o4btloq7grq9kts0ms7gi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDu-vQE3OEA2nov-kNoSyyzwHgRxwd50Xk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "479843936652-a1ackso4294o4btloq7grq9kts0ms7gi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

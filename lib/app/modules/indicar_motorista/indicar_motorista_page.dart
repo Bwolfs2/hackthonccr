@@ -33,15 +33,15 @@ class _IndicarMotoristaPageState
             //     fontSize: 18.0,
             //   ),
             // ),
-            actions: <Widget>[
-              IconButton(
-                icon: Icon(
-                  Icons.shopping_cart,
-                ),
-                onPressed: () {},
-              ),
-            ],
-            expandedHeight: 250.0,
+            // actions: <Widget>[
+            //   IconButton(
+            //     icon: Icon(
+            //       Icons.shopping_cart,
+            //     ),
+            //     onPressed: () {},
+            //   ),
+            // ],
+            expandedHeight: 270.0,
             flexibleSpace: FlexibleSpaceBar(
               background: Stack(
                 children: <Widget>[
@@ -65,22 +65,22 @@ class _IndicarMotoristaPageState
                         Container(
                           width: MediaQuery.of(context).size.width * .65,
                           child: Text(
-                            "Indique motoristas e ganhe pontos",
+                            "Indique amigos\n e Ganhe!",
                             style: TextStyle(
                               fontSize: 28,
-                              fontWeight: FontWeight.w600,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                         ),
                         SizedBox(
-                          height: 30,
+                          height: 10,
                         ),
                         Container(
                           width: MediaQuery.of(context).size.width * .5,
                           child: RichText(
                             text: TextSpan(
                               style: TextStyle(
-                                fontSize: 13.0,
+                                fontSize: 14,
                                 color: Colors.black,
                               ),
                               children: <TextSpan>[
@@ -90,27 +90,25 @@ class _IndicarMotoristaPageState
                                       TextStyle(fontWeight: FontWeight.normal),
                                 ),
                                 TextSpan(
-                                  text: '100 pontos ',
-                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                  text: '100 Journis ',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 15,
+                                      color: Colors.red),
                                 ),
                                 TextSpan(
                                   text:
-                                      'para cada motorista cadastrado com seu ',
+                                      'para\ncada caminhoneiro\ncadastrado, ele ganhará',
                                   style:
                                       TextStyle(fontWeight: FontWeight.normal),
                                 ),
                                 TextSpan(
-                                  text: 'código ',
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                ),
-                                TextSpan(
-                                  text: 'ele(a) ganhará ',
-                                  style:
-                                      TextStyle(fontWeight: FontWeight.normal),
-                                ),
-                                TextSpan(
-                                  text: '200 pontos:',
-                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                  text: ' \n200 Journis:',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 15,
+                                    color: Colors.red,
+                                  ),
                                 ),
                               ],
                             ),
@@ -121,10 +119,14 @@ class _IndicarMotoristaPageState
                         ),
                         Text(
                           "JOAOSILVA857",
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.red,
+                            fontSize: 18,
+                          ),
                         ),
                         SizedBox(
-                          height: 20,
+                          height: 30,
                         ),
                       ],
                     ),
@@ -159,20 +161,62 @@ class _IndicarMotoristaPageState
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: <Widget>[
-                          Icon(
-                            FontAwesomeIcons.facebook,
-                            size: 60,
-                            color: Colors.blue[500],
+                          Column(
+                            children: <Widget>[
+                              Icon(
+                                FontAwesomeIcons.whatsapp,
+                                size: 60,
+                                color: Colors.green[400],
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                "WhatsApp",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18,
+                                ),
+                              )
+                            ],
                           ),
-                          Icon(
-                            FontAwesomeIcons.whatsapp,
-                            size: 60,
-                            color: Colors.green[400],
+                          Column(
+                            children: <Widget>[
+                              Icon(
+                                FontAwesomeIcons.facebook,
+                                size: 60,
+                                color: Colors.blue[500],
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                "Facebook",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18,
+                                ),
+                              )
+                            ],
                           ),
-                          Icon(
-                            Icons.mail_outline,
-                            size: 60,
-                            color: Colors.grey[400],
+                          Column(
+                            children: <Widget>[
+                              Icon(
+                                FontAwesomeIcons.sms,
+                                size: 60,
+                                color: Colors.orange,
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                "SMS",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18,
+                                ),
+                              )
+                            ],
                           ),
                         ],
                       ),
@@ -185,25 +229,47 @@ class _IndicarMotoristaPageState
                             bottom: 0,
                             child: Image.asset(
                               "assets/healty option.png",
-                              width: 230,
+                              width: 300,
                             ),
                           ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
-                              TitleWidget("15 motoristas"),
+                              TitleWidget(
+                                "15 Caminhoneiros",
+                                color: Colors.red,
+                              ),
                               Padding(
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 10),
-                                child: Text(
-                                  "estão cuidando da saúde, depois da sua indicação!",
-                                  style: TextStyle(fontSize: 16),
+                                child: RichText(
+                                  text: TextSpan(
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.black,
+                                    ),
+                                    children: <TextSpan>[
+                                      TextSpan(
+                                        text: 'estão cuidando da saúde',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.normal),
+                                      ),
+                                      TextSpan(
+                                        text: ' Física , Mental e Financeira ',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      TextSpan(
+                                          text: ' depois da sua indicação.')
+                                    ],
+                                  ),
                                 ),
-                              ),
+                              )
                             ],
                           ),
                           SizedBox(
-                            height: 250,
+                            height: 300,
                           )
                         ],
                       ),

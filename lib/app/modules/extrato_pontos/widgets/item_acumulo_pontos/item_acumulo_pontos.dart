@@ -11,8 +11,8 @@ class ItemAcumuloPontos extends StatelessWidget {
       {Key key,
       @required this.starPoints,
       @required this.healthPoints,
-      @required this.starPosition,
-      @required this.healthPosition})
+      this.starPosition,
+      this.healthPosition})
       : super(key: key);
 
   @override
@@ -32,8 +32,12 @@ class ItemAcumuloPontos extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   CircleAvatar(
-                    child: Icon(Icons.perm_camera_mic),
+                    child: Image.asset(
+                      "assets/journi_coin.png",
+                      width: 40,
+                    ),
                     radius: 30,
+                    backgroundColor: Colors.black38,
                   ),
                   SizedBox(
                     height: 10,
@@ -48,13 +52,14 @@ class ItemAcumuloPontos extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
-            Text("$starPosition no ranking")
+            if (starPosition != null) Text("$starPosition no ranking")
           ],
         ),
         SizedBox(
           width: 20,
         ),
         Material(
+          color: Colors.transparent,
           child: Column(
             children: <Widget>[
               Container(
@@ -68,8 +73,13 @@ class ItemAcumuloPontos extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     CircleAvatar(
-                      child: Icon(Icons.perm_camera_mic),
+                      child: Icon(
+                        Icons.favorite,
+                        color: Colors.red,
+                        size: 40,
+                      ),
                       radius: 30,
+                      backgroundColor: Colors.black38,
                     ),
                     SizedBox(
                       height: 10,
@@ -84,7 +94,7 @@ class ItemAcumuloPontos extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              Text("$healthPosition° no ranking")
+              if (healthPosition != null) Text("$healthPosition° no ranking")
             ],
           ),
         ),

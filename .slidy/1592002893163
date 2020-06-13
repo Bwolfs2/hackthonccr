@@ -1,7 +1,0 @@
-lib/app/modules/meus_vouchers/meus_vouchers_module.dart
-lib/app/modules/meus_vouchers/meus_vouchers_page.dart
-test/app/modules/meus_vouchers/meus_vouchers_page_test.dart
-lib/app/modules/meus_vouchers/repositories/meus_vouchers_repository.dart
-lib/app/modules/meus_vouchers/meus_vouchers_controller.dart
-test/app/modules/meus_vouchers/repositories/meus_vouchers_repository_test.dart
-test/app/modules/meus_vouchers/meus_vouchers_controller_test.dart

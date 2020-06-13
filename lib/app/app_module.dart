@@ -8,6 +8,7 @@ import 'app_controller.dart';
 import 'modules/checkin/checkin_module.dart';
 import 'modules/extrato_pontos/extrato_pontos_module.dart';
 import 'modules/indicar_motorista/indicar_motorista_module.dart';
+import 'modules/jornada/jornada_module.dart';
 import 'modules/meus_vouchers/meus_vouchers_module.dart';
 import 'modules/ranking/ranking_module.dart';
 import 'modules/trocar_pontos/trocar_pontos_module.dart';
@@ -40,6 +41,7 @@ class AppModule extends MainModule {
         Router("/pagar", module: PagarModule()),
         Router("/receber", module: ReceberModule()),
         Router("/extratoCarteira", module: ExtratoCarteiraModule()),
+        Router("/jornada", module: JornadaModule()),
       ];
 
   @override

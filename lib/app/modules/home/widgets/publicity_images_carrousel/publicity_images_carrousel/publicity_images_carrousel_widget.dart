@@ -56,7 +56,9 @@ class _PublicityImagesCarrouselWidgetState extends ModularState<
                         decoration: BoxDecoration(
                           color: Theme.of(context).primaryColor,
                           image: DecorationImage(
-                              image: NetworkImage(controller.images[index].url),
+                              image: controller.images[index].url != null
+                                  ? NetworkImage(controller.images[index].url)
+                                  : AssetImage(controller.images[index].asset),
                               fit: BoxFit.cover),
                           borderRadius: BorderRadius.circular(15),
                         ),

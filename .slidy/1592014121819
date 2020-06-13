@@ -1,4 +1,0 @@
-lib/app/modules/pagar/pages/confirmacao/confirmacao_page.dart
-test/app/modules/pagar/pages/confirmacao/confirmacao_page_test.dart
-lib/app/modules/pagar/pages/confirmacao/confirmacao_controller.dart
-test/app/modules/pagar/pages/confirmacao/confirmacao_controller_test.dart

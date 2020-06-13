@@ -1,5 +1,0 @@
-lib/app/modules/indicar_motorista/indicar_motorista_module.dart
-lib/app/modules/indicar_motorista/indicar_motorista_page.dart
-test/app/modules/indicar_motorista/indicar_motorista_page_test.dart
-lib/app/modules/indicar_motorista/indicar_motorista_controller.dart
-test/app/modules/indicar_motorista/indicar_motorista_controller_test.dart

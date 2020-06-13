@@ -5,8 +5,10 @@ class PublicityImageModel {
     this.url,
     this.id,
     this.action,
+    this.asset,
   });
 
+  String asset;
   String url;
   int id;
   String action;
@@ -18,6 +20,7 @@ class PublicityImageModel {
   }) =>
       PublicityImageModel(
         url: url ?? this.url,
+        asset: asset ?? this.asset,
         id: id ?? this.id,
         action: action ?? this.action,
       );
@@ -29,12 +32,14 @@ class PublicityImageModel {
 
   static PublicityImageModel fromMap(dynamic json) => PublicityImageModel(
         url: json["url"],
+        asset: json["asset"],
         id: json["id"],
         action: json["action"],
       );
 
   Map<String, dynamic> toMap() => {
         "url": url,
+        "asset": asset,
         "id": id,
         "action": action,
       };
