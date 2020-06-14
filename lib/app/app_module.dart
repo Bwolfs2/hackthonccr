@@ -6,6 +6,7 @@ import 'package:hasura_connect/hasura_connect.dart';
 
 import 'app_controller.dart';
 import 'modules/checkin/checkin_module.dart';
+import 'modules/em_desenvolvimento/em_desenvolvimento_module.dart';
 import 'modules/extrato_pontos/extrato_pontos_module.dart';
 import 'modules/indicar_motorista/indicar_motorista_module.dart';
 import 'modules/jornada/jornada_module.dart';
@@ -18,6 +19,7 @@ import 'modules/receber/receber_module.dart';
 import 'modules/extrato_carteira/extrato_carteira_module.dart';
 import 'modules/diario/diario_module.dart';
 
+import 'modules/wifi/wifi_module.dart';
 import 'shared/widgets/meus_pontos/meus_pontos_controller.dart';
 
 class AppModule extends MainModule {
@@ -46,7 +48,8 @@ class AppModule extends MainModule {
         Router("/extratoCarteira", module: ExtratoCarteiraModule()),
         Router("/jornada", module: JornadaModule()),
         Router("/diario", module: DiarioModule()),
-        Router("/sono", module: SonoModule()),
+        Router("/wifi", module: WifiModule()),
+        Router("/emDesenvolvimento", module: EmDesenvolvimentoModule()),
       ];
 
   @override

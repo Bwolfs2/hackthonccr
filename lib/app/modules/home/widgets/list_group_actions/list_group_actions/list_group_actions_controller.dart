@@ -7,5 +7,5 @@ class ListGroupActionsController = _ListGroupActionsControllerBase
     with _$ListGroupActionsController;
 
 abstract class _ListGroupActionsControllerBase with Store {
-  final expandController = ExpandableController();
+  final expandController = ExpandableController(initialExpanded: true);
 }

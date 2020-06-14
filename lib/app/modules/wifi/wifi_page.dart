@@ -2,20 +2,20 @@ import 'package:barcode_scan/barcode_scan.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:asuka/asuka.dart' as asuka;
 import 'package:hackthonccr/app/shared/widgets/rounded_panel/rounded_panel_widget.dart';
 import 'package:hackthonccr/app/shared/widgets/title/title_widget.dart';
-import 'pagar_controller.dart';
-import 'package:asuka/asuka.dart' as asuka;
+import 'wifi_controller.dart';
 
-class PagarPage extends StatefulWidget {
+class WifiPage extends StatefulWidget {
   final String title;
-  const PagarPage({Key key, this.title = "Pagar"}) : super(key: key);
+  const WifiPage({Key key, this.title = "Conectar Wifi"}) : super(key: key);
 
   @override
-  _PagarPageState createState() => _PagarPageState();
+  _WifiPageState createState() => _WifiPageState();
 }
 
-class _PagarPageState extends ModularState<PagarPage, PagarController> {
+class _WifiPageState extends ModularState<WifiPage, WifiController> {
   //use 'controller' variable to access controller
 
   @override
@@ -96,7 +96,8 @@ class _PagarPageState extends ModularState<PagarPage, PagarController> {
                         children: <Widget>[
                           Container(
                             width: MediaQuery.of(context).size.width * .5,
-                            child: TitleWidget("Escanear QRCode\npara pagar"),
+                            child: TitleWidget(
+                                "Escanear QRCode\npara Conectar-se"),
                           ),
                           SizedBox(
                             height: 20,
@@ -107,10 +108,9 @@ class _PagarPageState extends ModularState<PagarPage, PagarController> {
                                 InkWell(
                                   onTap: () async {
                                     var result = await BarcodeScanner.scan();
-                                    print(result);
                                     if (result.rawContent != null &&
                                         result.rawContent.trim() != '') {
-                                      Modular.link.pushNamed("/confirmacao");
+                                      Modular.to.pop();
                                     } else {
                                       asuka.showSnackBar(
                                         SnackBar(

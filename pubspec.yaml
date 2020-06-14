@@ -21,6 +21,7 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:  
+  flutter_sparkline: ^0.1.0
   cloud_audio_player: ^0.0.2 
   flutter_polyline_points: ^0.2.2
   intl: ^0.16.1

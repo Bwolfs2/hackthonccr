@@ -41,12 +41,17 @@ class _HeaderWidgetState extends ModularState<HeaderWidget, HeaderController> {
                   fontSize: 14,
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 5),
-                child: Icon(
-                  FontAwesomeIcons.laugh,
-                  color: Colors.green,
-                  size: 40,
+              GestureDetector(
+                onTap: () {
+                  Modular.to.pushNamed("/diario/meuHumor");
+                },
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 5),
+                  child: Icon(
+                    FontAwesomeIcons.laugh,
+                    color: Colors.green,
+                    size: 40,
+                  ),
                 ),
               )
             ],

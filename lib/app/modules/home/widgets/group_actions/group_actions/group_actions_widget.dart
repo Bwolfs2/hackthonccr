@@ -35,7 +35,6 @@ class GroupActionsWidget extends StatelessWidget {
             ),
             itemBuilder: (context, index) {
               var actionModel = itemsActions[index];
-
               return GestureDetector(
                 onTap: actionModel.action,
                 child: Container(
@@ -50,14 +49,27 @@ class GroupActionsWidget extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      CircleAvatar(
-                        child: Icon(
-                          actionModel.icon,
-                          color: Colors.black87,
-                          size: 25,
-                        ),
-                        backgroundColor: Colors.black26,
-                        radius: 25,
+                      Stack(
+                        children: [
+                          CircleAvatar(
+                            child: Icon(
+                              actionModel.icon,
+                              color: Colors.black87,
+                              size: 25,
+                            ),
+                            backgroundColor: Colors.black26,
+                            radius: 25,
+                          ),
+                          if (actionModel.emBreve)
+                            Positioned(
+                              right: 30,
+                              bottom: 15,
+                              child: Banner(
+                                message: "Em Breve",
+                                location: BannerLocation.bottomStart,
+                              ),
+                            ),
+                        ],
                       ),
                       SizedBox(
                         height: 10,

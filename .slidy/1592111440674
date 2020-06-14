@@ -1,0 +1,4 @@
+lib/app/modules/diario/pages/meu_humor/meu_humor_page.dart
+test/app/modules/diario/pages/meu_humor/meu_humor_page_test.dart
+lib/app/modules/diario/pages/meu_humor/meu_humor_controller.dart
+test/app/modules/diario/pages/meu_humor/meu_humor_controller_test.dart
