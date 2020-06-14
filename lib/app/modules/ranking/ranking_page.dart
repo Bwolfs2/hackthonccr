@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hackthonccr/app/shared/widgets/meus_pontos/meus_pontos_widget.dart';
 import 'package:hackthonccr/app/shared/widgets/rounded_panel/rounded_panel_widget.dart';
 import 'package:hackthonccr/app/shared/widgets/title/title_widget.dart';
@@ -99,8 +100,14 @@ class _RankingPageState extends ModularState<RankingPage, RankingController> {
                                       children: <Widget>[
                                         Expanded(
                                             child: Text(
-                                                "Mudar para pontos saúde")),
-                                        Icon(Icons.art_track),
+                                          "Mudar para pontos saúde",
+                                          style: TextStyle(fontSize: 10),
+                                        )),
+                                        IconButton(
+                                          icon: Image.asset(
+                                              "assets/journi_coin.png"),
+                                          onPressed: () {},
+                                        ),
                                       ],
                                     ),
                                   )
@@ -139,75 +146,27 @@ class _RankingPageState extends ModularState<RankingPage, RankingController> {
                                       lista: [
                                         RankingModel(
                                           nome: "Vilson B",
-                                          pontuacao: 833587,
-                                          position: 1,
-                                        ),
-                                        RankingModel(
-                                          nome: "Filipo Peter",
-                                          pontuacao: 730587,
-                                          position: 2,
-                                        ),
-                                        RankingModel(
-                                          nome: "Tuca Silva",
-                                          pontuacao: 627222,
-                                          position: 3,
-                                        ),
-                                        RankingModel(
-                                          nome: "Frank dos Reis",
-                                          pontuacao: 626222,
-                                          position: 4,
-                                        ),
-                                        RankingModel(
-                                          nome: "Alisson",
-                                          pontuacao: 625223,
-                                          position: 5,
-                                        ),
-                                        RankingModel(
-                                          nome: "Bwolf",
-                                          pontuacao: 525222,
-                                          position: 6,
-                                        ),
-                                        RankingModel(
-                                          nome: "Jorge do Truck",
-                                          pontuacao: 522322,
-                                          position: 7,
-                                        ),
-                                        RankingModel(
-                                          nome: "Tico das Asas",
-                                          pontuacao: 422227,
-                                          position: 8,
-                                        ),
-                                        RankingModel(
-                                          nome: "Joao Viajador",
-                                          pontuacao: 322222,
-                                          position: 9,
-                                        ),
-                                        RankingModel(
-                                          nome: "Tiaguinho",
-                                          pontuacao: 120035,
-                                          position: 10,
-                                        ),
-                                      ],
-                                    ),
-                                    RankingView(
-                                      lista: [
-                                        RankingModel(
-                                          nome: "Vilson B",
                                           pontuacao: 33587,
                                           position: 1,
+                                          url:
+                                              'https://pbs.twimg.com/profile_images/1135526099063099393/lMunFp_o_400x400.jpg',
                                         ),
                                         RankingModel(
                                           nome: "Filipo Peter",
                                           pontuacao: 30587,
                                           position: 2,
-                                        ),
-                                        RankingModel(
-                                          nome: "Tuca Silva",
-                                          pontuacao: 27222,
-                                          position: 3,
+                                          url:
+                                              'https://avatars2.githubusercontent.com/u/4654514?s=460&u=eb927206d1e73ccc297f0a7911f4c8892bc3900f&v=4',
                                         ),
                                         RankingModel(
                                           nome: "Frank dos Reis",
+                                          pontuacao: 27222,
+                                          position: 3,
+                                          url:
+                                              'https://scontent.fpoa6-1.fna.fbcdn.net/v/t1.0-9/81577267_2902405543138055_5969684390282788864_n.jpg?_nc_cat=104&_nc_sid=8024bb&_nc_ohc=A_9TIFxNaT4AX_CVMFW&_nc_ht=scontent.fpoa6-1.fna&oh=b47909035faae638679ecfd673e18870&oe=5F097ABC',
+                                        ),
+                                        RankingModel(
+                                          nome: "Tuca Silva",
                                           pontuacao: 26222,
                                           position: 4,
                                         ),
@@ -242,7 +201,65 @@ class _RankingPageState extends ModularState<RankingPage, RankingController> {
                                           position: 10,
                                         ),
                                       ],
-                                    )
+                                    ),
+                                    RankingView(
+                                      lista: [
+                                        RankingModel(
+                                          nome: "Frank dos Reis",
+                                          pontuacao: 8587,
+                                          position: 1,
+                                          url:
+                                              'https://scontent.fpoa6-1.fna.fbcdn.net/v/t1.0-9/81577267_2902405543138055_5969684390282788864_n.jpg?_nc_cat=104&_nc_sid=8024bb&_nc_ohc=A_9TIFxNaT4AX_CVMFW&_nc_ht=scontent.fpoa6-1.fna&oh=b47909035faae638679ecfd673e18870&oe=5F097ABC',
+                                        ),
+                                        RankingModel(
+                                            nome: "Vilson B",
+                                            pontuacao: 7387,
+                                            position: 2,
+                                            url:
+                                                'https://pbs.twimg.com/profile_images/1135526099063099393/lMunFp_o_400x400.jpg'),
+                                        RankingModel(
+                                            nome: "Filipo Peter",
+                                            pontuacao: 6222,
+                                            position: 3,
+                                            url:
+                                                'https://avatars2.githubusercontent.com/u/4654514?s=460&u=eb927206d1e73ccc297f0a7911f4c8892bc3900f&v=4'),
+                                        RankingModel(
+                                          nome: "Tuca Silva",
+                                          pontuacao: 6122,
+                                          position: 4,
+                                        ),
+                                        RankingModel(
+                                          nome: "Alisson",
+                                          pontuacao: 6053,
+                                          position: 5,
+                                        ),
+                                        RankingModel(
+                                          nome: "Bwolf",
+                                          pontuacao: 5252,
+                                          position: 6,
+                                        ),
+                                        RankingModel(
+                                          nome: "Jorge do Truck",
+                                          pontuacao: 5122,
+                                          position: 7,
+                                        ),
+                                        RankingModel(
+                                          nome: "Tico das Asas",
+                                          pontuacao: 4207,
+                                          position: 8,
+                                        ),
+                                        RankingModel(
+                                          nome: "Joao Viajador",
+                                          pontuacao: 3022,
+                                          position: 9,
+                                        ),
+                                        RankingModel(
+                                          nome: "Tiaguinho",
+                                          pontuacao: 1205,
+                                          position: 10,
+                                        ),
+                                      ],
+                                    ),
                                   ],
                                 ),
                               )
@@ -289,7 +306,7 @@ class RankingView extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
                       CircleAvatar(
-                        child: Icon(Icons.perm_camera_mic),
+                        backgroundImage: NetworkImage(lista[1].url),
                         radius: 25,
                       ),
                       SizedBox(
@@ -333,11 +350,16 @@ class RankingView extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: <Widget>[
-                  Text(
-                    "${lista[0].nome}",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
+                  Container(
+                    width: 100,
+                    child: AutoSizeText(
+                      "${lista[0].nome}",
+                      maxLines: 1,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
                     ),
                   ),
                   Stack(
@@ -354,7 +376,7 @@ class RankingView extends StatelessWidget {
                           mainAxisSize: MainAxisSize.min,
                           children: <Widget>[
                             CircleAvatar(
-                              child: Icon(Icons.perm_camera_mic),
+                              backgroundImage: NetworkImage(lista[0].url),
                               radius: 30,
                             ),
                             SizedBox(
@@ -406,7 +428,7 @@ class RankingView extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
                       CircleAvatar(
-                        child: Icon(Icons.perm_camera_mic),
+                        backgroundImage: NetworkImage(lista[2].url),
                         radius: 30,
                       ),
                       SizedBox(

@@ -7,7 +7,7 @@ class ListTileJornadaController = _ListTileJornadaControllerBase
 
 abstract class _ListTileJornadaControllerBase with Store {
   @observable
-  bool expanded = false;
+  bool expanded = true;
 
   @action
   void toggleExpand() {

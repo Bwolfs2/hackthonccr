@@ -162,11 +162,12 @@ class _TrocarPontosPageState
                                       Container(
                                         height: 180,
                                         child: ListView.builder(
-                                          itemCount: 3,
+                                          itemCount: controller.produtos.length,
                                           scrollDirection: Axis.horizontal,
                                           itemBuilder: (BuildContext context,
                                               int index) {
-                                            return ProdutoWidget();
+                                            return ProdutoWidget(
+                                                controller.produtos[index]);
                                           },
                                         ),
                                       ),
@@ -213,6 +214,8 @@ class _TrocarPontosPageState
                                           itemBuilder: (BuildContext context,
                                               int index) {
                                             return ProdutoWidget(
+                                                controller
+                                                    .produtosSemDesconto[index],
                                                 usarPontos: true);
                                           },
                                         ),
@@ -261,11 +264,13 @@ class _TrocarPontosPageState
                                       Container(
                                         height: 180,
                                         child: ListView.builder(
-                                          itemCount: 3,
+                                          itemCount: controller.produtos.length,
                                           scrollDirection: Axis.horizontal,
                                           itemBuilder: (BuildContext context,
                                               int index) {
-                                            return ProdutoWidget();
+                                            return ProdutoWidget(
+                                              controller.produtos[index],
+                                            );
                                           },
                                         ),
                                       ),
@@ -308,11 +313,14 @@ class _TrocarPontosPageState
                                       Container(
                                         height: 180,
                                         child: ListView.builder(
-                                          itemCount: 3,
+                                          itemCount: controller
+                                              .produtosSemDesconto.length,
                                           scrollDirection: Axis.horizontal,
                                           itemBuilder: (BuildContext context,
                                               int index) {
                                             return ProdutoWidget(
+                                                controller
+                                                    .produtosSemDesconto[index],
                                                 usarPontos: true);
                                           },
                                         ),
@@ -349,8 +357,10 @@ class _TrocarPontosPageState
 
 class ProdutoWidget extends StatelessWidget {
   final bool usarPontos;
+  final ProdutoModel produto;
 
-  const ProdutoWidget({Key key, this.usarPontos = false}) : super(key: key);
+  const ProdutoWidget(this.produto, {Key key, this.usarPontos = false})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -365,18 +375,26 @@ class ProdutoWidget extends StatelessWidget {
           decoration: BoxDecoration(
             color: Theme.of(context).primaryColor,
             borderRadius: BorderRadius.circular(20),
+            image: DecorationImage(
+              image: AssetImage("assets/${produto.assetImage}"),
+              fit: BoxFit.cover,
+            ),
           ),
           alignment: Alignment.bottomCenter,
-          child: Text(
-            usarPontos ? "5000p" : "-10%",
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
+          child: Container(
+            color: Colors.black54,
+            padding: EdgeInsets.symmetric(horizontal: 5),
+            child: Text(
+              usarPontos ? produto.pontos : produto.desconto,
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
             ),
           ),
         ),
-        Text("Peças do Joao"),
-        Text("São Paulo/Sp"),
+        Text(produto.descricao),
+        Text(produto.cidade),
         Container(
           padding: EdgeInsets.symmetric(horizontal: 15, vertical: 2),
           decoration: BoxDecoration(
@@ -391,7 +409,7 @@ class ProdutoWidget extends StatelessWidget {
         ),
         if (!usarPontos)
           Text(
-            "com 200p",
+            "com ${produto.pontos}",
             style: TextStyle(fontSize: 10),
           ),
       ],

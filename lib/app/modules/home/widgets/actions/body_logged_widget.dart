@@ -88,8 +88,12 @@ class _BodyLoggedWidgetState
                     "Agendamentos", FontAwesomeIcons.calendarPlus, () {}),
                 ActionModel("Exames", FontAwesomeIcons.xRay, () {}),
                 ActionModel("Minha Saude", Icons.favorite, () {}),
-                ActionModel("Diario", FontAwesomeIcons.calendar, () {}),
-                ActionModel("Sono", FontAwesomeIcons.bed, () {}),
+                ActionModel("Diario", FontAwesomeIcons.calendar, () {
+                  Modular.to.pushNamed("/diario");
+                }),
+                ActionModel("Sono", FontAwesomeIcons.bed, () {
+                  Modular.to.pushNamed("/sono");
+                }),
                 ActionModel("Medicação", FontAwesomeIcons.pills, () {}),
                 ActionModel("Atendimento Presencial",
                     FontAwesomeIcons.clinicMedical, () {}),

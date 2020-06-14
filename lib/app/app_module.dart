@@ -11,10 +11,13 @@ import 'modules/indicar_motorista/indicar_motorista_module.dart';
 import 'modules/jornada/jornada_module.dart';
 import 'modules/meus_vouchers/meus_vouchers_module.dart';
 import 'modules/ranking/ranking_module.dart';
+import 'modules/sono/sono_module.dart';
 import 'modules/trocar_pontos/trocar_pontos_module.dart';
 import 'modules/pagar/pagar_module.dart';
 import 'modules/receber/receber_module.dart';
 import 'modules/extrato_carteira/extrato_carteira_module.dart';
+import 'modules/diario/diario_module.dart';
+
 import 'shared/widgets/meus_pontos/meus_pontos_controller.dart';
 
 class AppModule extends MainModule {
@@ -42,6 +45,8 @@ class AppModule extends MainModule {
         Router("/receber", module: ReceberModule()),
         Router("/extratoCarteira", module: ExtratoCarteiraModule()),
         Router("/jornada", module: JornadaModule()),
+        Router("/diario", module: DiarioModule()),
+        Router("/sono", module: SonoModule()),
       ];
 
   @override

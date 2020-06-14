@@ -24,7 +24,7 @@ class GroupActionsWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          TitleWidget(title, color: Colors.red),
+          TitleWidget(title),
           GridView.builder(
             itemCount: itemsActions?.length ?? 0,
             shrinkWrap: true,

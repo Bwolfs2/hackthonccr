@@ -87,7 +87,7 @@ class _ExtratoPontosPageState
                                       Expanded(
                                           child: TitleWidget(
                                         "Acúmulo de Pontos",
-                                        color: Colors.red,
+                                        //  color: Colors.red,
                                       )),
                                       Icon(
                                         Icons.arrow_forward,
@@ -241,7 +241,7 @@ class GridExtrato extends StatelessWidget {
               Expanded(
                   child: TitleWidget(
                 "Extrato de Pontos",
-                color: Colors.red,
+                //  color: Colors.red,
               )),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
