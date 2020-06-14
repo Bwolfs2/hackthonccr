@@ -181,7 +181,9 @@ class _ExtratoPontosPageState
                                     ),
                                   ),
                                   RaisedButton(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Modular.to.pushNamed("/ranking");
+                                    },
                                     color: Theme.of(context).primaryColor,
                                     child: Padding(
                                       padding: const EdgeInsets.symmetric(
@@ -220,7 +222,9 @@ class _ExtratoPontosPageState
           right: 20,
           child: FloatingActionButton(
             backgroundColor: Colors.red,
-            onPressed: () {},
+            onPressed: () {
+              Modular.to.pushNamed("/trocarPontos");
+            },
             child: Icon(Icons.shopping_cart),
           ),
         )

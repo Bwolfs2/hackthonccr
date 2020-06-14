@@ -16,10 +16,20 @@ abstract class _JornadaControllerBase with Store {
         distancia: "127,4",
         paradas: [
           ParadaModel(
+              local: "Posto Araruana",
+              cidade: "Farroupilha / RS",
+              distancia: "81,4",
+              temperatura: "27"),
+          ParadaModel(
               local: "Posto Rio Branco",
               cidade: "Caxias do Sul/RS",
-              distancia: "3,4",
-              temperatura: "23")
+              distancia: "90,4",
+              temperatura: "23"),
+          ParadaModel(
+              local: "Churrascaria Carne Assada",
+              cidade: "Caxias do Sul / RS",
+              distancia: "100,1",
+              temperatura: "22"),
         ]),
     JornadaModel(
         dataInicial: "25 MAI 2020",

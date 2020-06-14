@@ -132,7 +132,10 @@ class _ListTileJornadaWidgetState
                         bottomLeft: Radius.circular(20),
                         bottomRight: Radius.circular(20))),
                 duration: Duration(milliseconds: 300),
-                height: controller.expanded ? widget.paradas.length * 120.0 : 0,
+                height: controller.expanded
+                    ? widget.paradas.length * 115.0 +
+                        (widget.paradas.length > 2 ? 40 : 0)
+                    : 0,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -147,6 +150,7 @@ class _ListTileJornadaWidgetState
                     ListView.builder(
                       shrinkWrap: true,
                       itemCount: widget.paradas.length,
+                      physics: NeverScrollableScrollPhysics(),
                       itemBuilder: (BuildContext context, int index) {
                         var current = widget.paradas[index];
                         return Column(
@@ -185,20 +189,19 @@ class _ListTileJornadaWidgetState
                             ),
                             if (index == 1)
                               Container(
-                                height: 60,
+                                height: 90,
                                 margin: EdgeInsets.symmetric(vertical: 20),
                                 width: double.infinity,
                                 alignment: Alignment.center,
                                 decoration: BoxDecoration(
-                                  color: Color(0xffFFD520),
-                                  border: Border.all(
-                                    width: 1,
-                                  ),
-                                  borderRadius: BorderRadius.circular(20),
+                                  // color: Color(0xffFFD520),
+                                  // border: Border.all(
+                                  //   width: 1,
+                                  // ),
+                                  // borderRadius: BorderRadius.circular(20),
                                   image: DecorationImage(
-                                    image: AssetImage(
-                                        "assets/propaganda_ipiranga.png"),
-                                    fit: BoxFit.contain,
+                                    image: AssetImage("assets/CHICAO.png"),
+                                    fit: BoxFit.cover,
                                   ),
                                 ),
                               ),

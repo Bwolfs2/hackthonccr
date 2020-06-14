@@ -1,3 +1,5 @@
+import 'package:hackthonccr/app/shared/stores/auth_store.dart';
+
 import 'header/header/header_controller.dart';
 import 'indique_ganhe/indique_ganhe/indique_ganhe_controller.dart';
 import 'widgets/parceiro_caminhoneiro/parceiro_caminhoneiro/parceiro_caminhoneiro_controller.dart';
@@ -25,8 +27,8 @@ class HomeModule extends ChildModule {
         Bind((i) => PublicityRepository(i.get<HasuraConnect>())),
         Bind((i) =>
             PublicityImagesCarrouselController(i.get<PublicityRepository>())),
-        Bind((i) => BodyLoggedController()),
-        Bind((i) => HomeController()),
+        Bind((i) => BodyLoggedController(i.get<AuthStore>())),
+        Bind((i) => HomeController(i.get<AuthStore>())),
       ];
 
   @override

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -44,72 +45,155 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
                           ),
                         ),
                       ),
-                      SizedBox(
-                        width: 60,
-                      )
+                      Observer(
+                        builder: (BuildContext context) {
+                          if (controller.isLogged) {
+                            return Container(
+                              width: 100,
+                              height: 60,
+                              alignment: Alignment.center,
+                              child: GestureDetector(
+                                  onTap: () {
+                                    controller.logoff();
+                                  },
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(10),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Text("Sair"),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        CircleAvatar(
+                                          backgroundColor:
+                                              Colors.deepPurple[300],
+                                          child: Text(
+                                            "JA",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  )
+                                  // child: Padding(
+                                  //   padding: const EdgeInsets.all(10),
+                                  //   child: CircleAvatar(
+                                  //     backgroundImage: NetworkImage(
+                                  //         "https://pbs.twimg.com/profile_images/1135526099063099393/lMunFp_o_400x400.jpg"),
+                                  //   ),
+                                  // ),
+                                  ),
+                            );
+                          } else {
+                            return Container(
+                              width: 100,
+                              height: 60,
+                              child: GestureDetector(
+                                onTap: () {
+                                  Modular.to.pushNamed("/auth");
+                                },
+                                child: Padding(
+                                  padding: const EdgeInsets.all(10),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text("Entrar"),
+                                      Icon(Icons.person)
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            );
+                          }
+                        },
+                      ),
                     ],
                   ),
-                  HeaderWidget(),
+                  Observer(
+                    builder: (BuildContext context) {
+                      if (controller.isLogged) {
+                        return HeaderWidget();
+                      }
+                      return Container();
+                    },
+                  ),
                   BodyLoggedWidget(),
-                  ParceiroCaminhoneiroWidget(),
+                  Observer(
+                    builder: (BuildContext context) {
+                      return ParceiroCaminhoneiroWidget(
+                        isLogged: controller.isLogged,
+                      );
+                    },
+                  ),
                   IndiqueGanheWidget(),
                 ],
               ),
             ),
           ),
         ),
-        Positioned(
-          right: 20,
-          bottom: 20,
-          child: GestureDetector(
-            onLongPress: () {
-              asuka.showSnackBar(
-                SnackBar(
-                  backgroundColor: Colors.red,
-                  content: Container(
-                    child: Row(
-                      children: <Widget>[
-                        Text(
-                          "Estou sendo roubado!!!!",
-                          style: TextStyle(color: Colors.white),
+        Observer(
+          builder: (BuildContext context) {
+            if (controller.isLogged) {
+              return Positioned(
+                right: 20,
+                bottom: 20,
+                child: GestureDetector(
+                  onLongPress: () {
+                    asuka.showSnackBar(
+                      SnackBar(
+                        backgroundColor: Colors.red,
+                        content: Container(
+                          child: Row(
+                            children: <Widget>[
+                              Text(
+                                "Estou sendo roubado!!!!",
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ],
+                          ),
                         ),
-                      ],
-                    ),
+                      ),
+                    );
+                  },
+                  child: Column(
+                    children: <Widget>[
+                      Text(
+                        "SOS",
+                        style: TextStyle(
+                          color: Colors.red,
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Stack(
+                        alignment: Alignment.center,
+                        children: <Widget>[
+                          CircleAvatar(
+                            radius: 30,
+                            backgroundColor: Colors.red,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 5),
+                            child: Icon(
+                              FontAwesomeIcons.lifeRing,
+                              size: 45,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
                   ),
                 ),
               );
-            },
-            child: Column(
-              children: <Widget>[
-                Text(
-                  "SOS",
-                  style: TextStyle(
-                    color: Colors.red,
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                Stack(
-                  alignment: Alignment.center,
-                  children: <Widget>[
-                    CircleAvatar(
-                      radius: 30,
-                      backgroundColor: Colors.red,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 5),
-                      child: Icon(
-                        FontAwesomeIcons.lifeRing,
-                        size: 45,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ],
-                )
-              ],
-            ),
-          ),
-        )
+            }
+            return Container();
+          },
+        ),
       ],
     );
   }

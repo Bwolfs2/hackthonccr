@@ -103,7 +103,9 @@ class _ExtratoCarteiraPageState
                 child: Column(
                   children: <Widget>[
                     RaisedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Modular.to.pushNamed("/trocarPontos");
+                      },
                       color: Theme.of(context).primaryColor,
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 15),

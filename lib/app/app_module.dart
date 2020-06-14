@@ -5,6 +5,7 @@ import 'package:hackthonccr/app/modules/home/home_module.dart';
 import 'package:hasura_connect/hasura_connect.dart';
 
 import 'app_controller.dart';
+import 'modules/auth/auth_module.dart';
 import 'modules/checkin/checkin_module.dart';
 import 'modules/em_desenvolvimento/em_desenvolvimento_module.dart';
 import 'modules/extrato_pontos/extrato_pontos_module.dart';
@@ -20,6 +21,7 @@ import 'modules/extrato_carteira/extrato_carteira_module.dart';
 import 'modules/diario/diario_module.dart';
 
 import 'modules/wifi/wifi_module.dart';
+import 'shared/stores/auth_store.dart';
 import 'shared/widgets/meus_pontos/meus_pontos_controller.dart';
 
 class AppModule extends MainModule {
@@ -32,6 +34,7 @@ class AppModule extends MainModule {
         Bind(
           (i) => HasuraConnect("http://hackthonccr.herokuapp.com/v1/graphql"),
         ),
+        Bind((i) => AuthStore(), lazy: false, singleton: true),
       ];
 
   @override
@@ -50,6 +53,8 @@ class AppModule extends MainModule {
         Router("/diario", module: DiarioModule()),
         Router("/wifi", module: WifiModule()),
         Router("/emDesenvolvimento", module: EmDesenvolvimentoModule()),
+        Router("/sono", module: SonoModule()),
+        Router("/auth", module: AuthModule()),
       ];
 
   @override

@@ -9,30 +9,23 @@ part of 'home_controller.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$HomeController on _HomeControllerBase, Store {
-  final _$valueAtom = Atom(name: '_HomeControllerBase.value');
+  Computed<bool> _$isLoggedComputed;
 
   @override
-  int get value {
-    _$valueAtom.reportRead();
-    return super.value;
-  }
-
-  @override
-  set value(int value) {
-    _$valueAtom.reportWrite(value, super.value, () {
-      super.value = value;
-    });
-  }
+  bool get isLogged =>
+      (_$isLoggedComputed ??= Computed<bool>(() => super.isLogged,
+              name: '_HomeControllerBase.isLogged'))
+          .value;
 
   final _$_HomeControllerBaseActionController =
       ActionController(name: '_HomeControllerBase');
 
   @override
-  void increment() {
+  void logoff() {
     final _$actionInfo = _$_HomeControllerBaseActionController.startAction(
-        name: '_HomeControllerBase.increment');
+        name: '_HomeControllerBase.logoff');
     try {
-      return super.increment();
+      return super.logoff();
     } finally {
       _$_HomeControllerBaseActionController.endAction(_$actionInfo);
     }
@@ -41,7 +34,7 @@ mixin _$HomeController on _HomeControllerBase, Store {
   @override
   String toString() {
     return '''
-value: ${value}
+isLogged: ${isLogged}
     ''';
   }
 }

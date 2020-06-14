@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hackthonccr/app/shared/widgets/title/title_widget.dart';
 
 class ParceiroCaminhoneiroWidget extends StatelessWidget {
+  final bool isLogged;
+
+  const ParceiroCaminhoneiroWidget({Key key, @required this.isLogged})
+      : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -69,9 +75,16 @@ class ParceiroCaminhoneiroWidget extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        "João Antonio,",
-                        style: TextStyle(fontSize: 16),
+                      Observer(
+                        builder: (BuildContext context) {
+                          if (isLogged) {
+                            return Text(
+                              "João Antonio,",
+                              style: TextStyle(fontSize: 16),
+                            );
+                          }
+                          return Container();
+                        },
                       ),
                       Text(
                         "Posso te ajudar?",

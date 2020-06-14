@@ -153,11 +153,13 @@ class _MeusVouchersPageState
                                 Container(
                                   height: 190,
                                   child: ListView.builder(
-                                    itemCount: 3,
+                                    itemCount: controller.vouchers.length,
                                     scrollDirection: Axis.horizontal,
                                     itemBuilder:
                                         (BuildContext context, int index) {
-                                      return VouchersWidget();
+                                      return VouchersWidget(
+                                        model: controller.vouchers[index],
+                                      );
                                     },
                                   ),
                                 ),
@@ -195,11 +197,14 @@ class _MeusVouchersPageState
                                 Container(
                                   height: 190,
                                   child: ListView.builder(
-                                    itemCount: 3,
+                                    itemCount: controller.vouchersUsados.length,
                                     scrollDirection: Axis.horizontal,
                                     itemBuilder:
                                         (BuildContext context, int index) {
-                                      return VouchersWidget(ativo: false);
+                                      return VouchersWidget(
+                                        ativo: false,
+                                        model: controller.vouchersUsados[index],
+                                      );
                                     },
                                   ),
                                 ),
@@ -234,8 +239,10 @@ class _MeusVouchersPageState
 
 class VouchersWidget extends StatelessWidget {
   final bool ativo;
+  final MeuVoucherModel model;
 
-  const VouchersWidget({Key key, this.ativo = true}) : super(key: key);
+  const VouchersWidget({Key key, this.ativo = true, @required this.model})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -247,20 +254,25 @@ class VouchersWidget extends StatelessWidget {
           width: MediaQuery.of(context).size.width * .23,
           height: MediaQuery.of(context).size.width * .23,
           decoration: BoxDecoration(
-            color: Theme.of(context).primaryColor,
-            borderRadius: BorderRadius.circular(20),
-          ),
+              color: Theme.of(context).primaryColor,
+              borderRadius: BorderRadius.circular(20),
+              image: DecorationImage(
+                  image: AssetImage("assets/${model.assetImage}"))),
           alignment: Alignment.bottomCenter,
-          child: Text(
-            "-10%",
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
+          child: Container(
+            color: Colors.black38,
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: Text(
+              "${model.desconto}",
+              style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
             ),
           ),
         ),
-        Text("Peças do Joao"),
-        Text("São Paulo/Sp"),
+        Text("${model.descricao}"),
+        Text("${model.cidade}"),
         if (ativo)
           Column(
             children: <Widget>[
@@ -285,7 +297,7 @@ class VouchersWidget extends StatelessWidget {
           height: 5,
         ),
         Text(
-          "valido até 08/12",
+          "valido até ${model.validade}",
           style: TextStyle(fontSize: 10),
         ),
       ],
