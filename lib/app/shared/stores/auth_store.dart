@@ -17,11 +17,15 @@ abstract class _AuthStoreBase with Store {
   @action
   Future init() async {
     _prefs = await SharedPreferences.getInstance();
-    isLogged = _prefs.getBool("logged");
+    var isLo = _prefs.getBool("logged");
+    if (isLo == null) {
+      _prefs.setBool('logged', true);
+    }
+    isLogged = isLo ?? true;
   }
 
   @observable
-  bool isLogged = false;
+  bool isLogged = true;
 
   @action
   Future setLogged(bool _bool) async {

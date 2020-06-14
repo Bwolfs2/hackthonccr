@@ -110,7 +110,7 @@ class _SonoPageState extends ModularState<SonoPage, SonoController> {
                       ),
                       children: [
                         TextSpan(
-                          text: "Música relaxange",
+                          text: "Música relaxante",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                           ),

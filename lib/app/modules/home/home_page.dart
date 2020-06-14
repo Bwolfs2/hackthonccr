@@ -47,55 +47,46 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
                       ),
                       Observer(
                         builder: (BuildContext context) {
-                          if (controller.isLogged) {
-                            return Container(
-                              width: 100,
-                              height: 60,
-                              alignment: Alignment.center,
-                              child: GestureDetector(
-                                  onTap: () {
-                                    controller.logoff();
-                                  },
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(10),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Text("Sair"),
-                                        SizedBox(
-                                          width: 10,
-                                        ),
-                                        CircleAvatar(
-                                          backgroundColor:
-                                              Colors.deepPurple[300],
-                                          child: Text(
-                                            "JA",
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                            ),
+                          if (controller.isLogged ?? true) {
+                            return InkWell(
+                              onTap: () {
+                                controller.logoff();
+                              },
+                              child: Container(
+                                width: 100,
+                                height: 60,
+                                alignment: Alignment.center,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(10),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text("Sair"),
+                                      SizedBox(
+                                        width: 10,
+                                      ),
+                                      CircleAvatar(
+                                        backgroundColor: Colors.deepPurple[300],
+                                        child: Text(
+                                          "JA",
+                                          style: TextStyle(
+                                            color: Colors.white,
                                           ),
                                         ),
-                                      ],
-                                    ),
-                                  )
-                                  // child: Padding(
-                                  //   padding: const EdgeInsets.all(10),
-                                  //   child: CircleAvatar(
-                                  //     backgroundImage: NetworkImage(
-                                  //         "https://pbs.twimg.com/profile_images/1135526099063099393/lMunFp_o_400x400.jpg"),
-                                  //   ),
-                                  // ),
+                                      ),
+                                    ],
                                   ),
+                                ),
+                              ),
                             );
                           } else {
-                            return Container(
-                              width: 100,
-                              height: 60,
-                              child: GestureDetector(
-                                onTap: () {
-                                  Modular.to.pushNamed("/auth");
-                                },
+                            return InkWell(
+                              onTap: () {
+                                Modular.to.pushNamed("/auth");
+                              },
+                              child: Container(
+                                width: 100,
+                                height: 60,
                                 child: Padding(
                                   padding: const EdgeInsets.all(10),
                                   child: Row(
@@ -142,7 +133,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
                 right: 20,
                 bottom: 20,
                 child: GestureDetector(
-                  onLongPress: () {
+                  onTap: () {
                     asuka.showSnackBar(
                       SnackBar(
                         backgroundColor: Colors.red,
@@ -150,7 +141,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
                           child: Row(
                             children: <Widget>[
                               Text(
-                                "Estou sendo roubado!!!!",
+                                "Pedido enviado com sucesso! Aguarde!",
                                 style: TextStyle(color: Colors.white),
                               ),
                             ],

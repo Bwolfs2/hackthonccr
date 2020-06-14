@@ -49,19 +49,24 @@ class _IndiqueGanheWidgetState
               SizedBox(
                 height: 15,
               ),
-              Container(
-                width: 150,
-                height: 40,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                    color: Theme.of(context).primaryColor,
-                    borderRadius: BorderRadius.circular(20)),
-                child: Text(
-                  "CONVIDAR",
-                  style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.red),
+              InkWell(
+                onTap: () {
+                  Modular.to.pushNamed("/indicarMotorista");
+                },
+                child: Container(
+                  width: 150,
+                  height: 40,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                      color: Theme.of(context).primaryColor,
+                      borderRadius: BorderRadius.circular(20)),
+                  child: Text(
+                    "CONVIDAR",
+                    style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.red),
+                  ),
                 ),
               ),
             ],

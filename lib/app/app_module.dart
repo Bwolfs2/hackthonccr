@@ -28,9 +28,7 @@ class AppModule extends MainModule {
   @override
   List<Bind> get binds => [
         Bind((i) => MeusPontosController()),
-        Bind(
-          (i) => AppController(),
-        ),
+        Bind((i) => AppController(), lazy: false),
         Bind(
           (i) => HasuraConnect("http://hackthonccr.herokuapp.com/v1/graphql"),
         ),

@@ -1,15 +1,17 @@
 import 'package:mobx/mobx.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 part 'app_controller.g.dart';
 
 class AppController = _AppControllerBase with _$AppController;
 
 abstract class _AppControllerBase with Store {
-  @observable
-  int value = 0;
+  _AppControllerBase() {
+    init();
+  }
 
-  @action
-  void increment() {
-    value++;
+  Future init() async {
+    SharedPreferences shared = await SharedPreferences.getInstance();
+    await shared.setBool("first_open", true);
   }
 }

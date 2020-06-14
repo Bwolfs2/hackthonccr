@@ -20,7 +20,6 @@ class ParceiroCaminhoneiroWidget extends StatelessWidget {
         children: <Widget>[
           TitleWidget(
             "Parceiro Caminhoneiro",
-            // color: Colors.red,
           ),
           Padding(
             padding: const EdgeInsets.only(left: 10, right: 10),
@@ -33,8 +32,9 @@ class ParceiroCaminhoneiroWidget extends StatelessWidget {
           GridView(
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
-            gridDelegate:
-                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+            padding: EdgeInsets.all(10),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3, mainAxisSpacing: 10, childAspectRatio: .8),
             children: <Widget>[
               ItemParceiroCaminhoneiro(
                 icon: FontAwesomeIcons.gasPump,
@@ -121,16 +121,30 @@ class ItemParceiroCaminhoneiro extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.all(10),
       child: Column(
         children: <Widget>[
-          CircleAvatar(
-            backgroundColor: Color(0xff4D0000),
-            child: Icon(
-              icon,
-              size: 35,
-              color: Colors.white,
-            ),
-            radius: 40,
+          Stack(
+            overflow: Overflow.visible,
+            children: [
+              CircleAvatar(
+                backgroundColor: Color(0xff4D0000),
+                child: Icon(
+                  icon,
+                  size: 35,
+                  color: Colors.white,
+                ),
+                radius: 40,
+              ),
+              Positioned(
+                right: 45,
+                top: 45,
+                child: Banner(
+                  message: "Em Breve",
+                  location: BannerLocation.bottomStart,
+                ),
+              ),
+            ],
           ),
           SizedBox(
             height: 10,
