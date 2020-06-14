@@ -1,7 +1,5 @@
 import 'package:flutter_modular/flutter_modular_test.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:hackthonccr/app/shared/widgets/meus_pontos/meus_pontos_controller.dart';
 import 'package:hackthonccr/app/app_module.dart';
 
 void main() {

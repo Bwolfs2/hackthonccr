@@ -1,7 +1,6 @@
 import 'package:mobx/mobx.dart';
-
-import 'package:mobx/mobx.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
 part 'auth_store.g.dart';
 
 class AuthStore = _AuthStoreBase with _$AuthStore;

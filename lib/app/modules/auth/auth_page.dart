@@ -3,7 +3,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hackthonccr/app/shared/widgets/rounded_panel/rounded_panel_widget.dart';
-import 'package:hackthonccr/app/shared/widgets/title/title_widget.dart';
+
 import 'auth_controller.dart';
 
 class AuthPage extends StatefulWidget {

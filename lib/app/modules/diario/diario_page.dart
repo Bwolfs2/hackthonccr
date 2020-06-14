@@ -2,12 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_sparkline/flutter_sparkline.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:hackthonccr/app/modules/diario/widgets/what_make_u_feel_it/what_make_u_feel_it_widget.dart';
 import 'package:hackthonccr/app/shared/widgets/rounded_panel/rounded_panel_widget.dart';
 import 'package:hackthonccr/app/shared/widgets/title/title_widget.dart';
 
 import 'diario_controller.dart';
-import 'widgets/como_estou_me_sentindo/como_estou_me_sentindo.dart';
 
 class DiarioPage extends StatefulWidget {
   final String title;

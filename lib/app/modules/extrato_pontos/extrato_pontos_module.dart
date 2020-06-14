@@ -1,6 +1,6 @@
-import 'extrato_pontos_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:dio/dio.dart';
+
+import 'extrato_pontos_controller.dart';
 import 'extrato_pontos_page.dart';
 
 class ExtratoPontosModule extends ChildModule {

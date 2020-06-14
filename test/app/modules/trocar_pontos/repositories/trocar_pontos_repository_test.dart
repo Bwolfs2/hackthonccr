@@ -1,13 +1,11 @@
+import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:dio/dio.dart';
-
-import 'package:hackthonccr/app/modules/trocar_pontos/repositories/trocar_pontos_repository.dart';
 
 class MockClient extends Mock implements Dio {}
 
 void main() {
-  TrocarPontosRepository repository;
+  //TrocarPontosRepository repository;
   // MockClient client;
 
   setUp(() {

@@ -1,10 +1,9 @@
+import 'package:asuka/asuka.dart' as asuka;
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hackthonccr/app/shared/stores/auth_store.dart';
 import 'package:mobx/mobx.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:asuka/asuka.dart' as asuka;
 
 part 'home_controller.g.dart';
 

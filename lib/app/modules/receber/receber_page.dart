@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hackthonccr/app/shared/widgets/rounded_panel/rounded_panel_widget.dart';
-import 'package:hackthonccr/app/shared/widgets/title/title_widget.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:uuid/uuid.dart';
 

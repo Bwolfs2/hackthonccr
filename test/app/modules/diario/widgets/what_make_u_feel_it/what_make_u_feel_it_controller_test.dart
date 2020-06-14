@@ -1,7 +1,5 @@
 import 'package:flutter_modular/flutter_modular_test.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:hackthonccr/app/modules/diario/widgets/what_make_u_feel_it/what_make_u_feel_it_controller.dart';
 import 'package:hackthonccr/app/modules/diario/diario_module.dart';
 
 void main() {

@@ -1,13 +1,11 @@
+import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:dio/dio.dart';
-
-import 'package:hackthonccr/app/modules/auth/repositories/auth_repository.dart';
 
 class MockClient extends Mock implements Dio {}
 
 void main() {
-  AuthRepository repository;
+  //AuthRepository repository;
   // MockClient client;
 
   setUp(() {

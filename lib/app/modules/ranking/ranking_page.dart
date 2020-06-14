@@ -2,13 +2,13 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hackthonccr/app/shared/widgets/meus_pontos/meus_pontos_widget.dart';
 import 'package:hackthonccr/app/shared/widgets/rounded_panel/rounded_panel_widget.dart';
 import 'package:hackthonccr/app/shared/widgets/title/title_widget.dart';
-import 'ranking_controller.dart';
+
 import '../../shared/widgets/selectable_label/selectable_label.dart';
 import 'models/ranking_model.dart';
+import 'ranking_controller.dart';
 
 class RankingPage extends StatefulWidget {
   final String title;

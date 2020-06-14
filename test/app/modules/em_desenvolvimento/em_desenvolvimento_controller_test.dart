@@ -1,7 +1,5 @@
 import 'package:flutter_modular/flutter_modular_test.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:hackthonccr/app/modules/em_desenvolvimento/em_desenvolvimento_controller.dart';
 import 'package:hackthonccr/app/modules/em_desenvolvimento/em_desenvolvimento_module.dart';
 
 void main() {

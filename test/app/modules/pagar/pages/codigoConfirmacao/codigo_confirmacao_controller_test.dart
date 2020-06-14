@@ -1,7 +1,5 @@
 import 'package:flutter_modular/flutter_modular_test.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:hackthonccr/app/modules/pagar/pages/codigoConfirmacao/codigo_confirmacao_controller.dart';
 import 'package:hackthonccr/app/modules/pagar/pagar_module.dart';
 
 void main() {

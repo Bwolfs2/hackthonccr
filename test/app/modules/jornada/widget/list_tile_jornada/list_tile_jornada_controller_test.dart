@@ -1,7 +1,5 @@
 import 'package:flutter_modular/flutter_modular_test.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:hackthonccr/app/modules/jornada/widget/list_tile_jornada/list_tile_jornada_controller.dart';
 import 'package:hackthonccr/app/modules/jornada/jornada_module.dart';
 
 void main() {

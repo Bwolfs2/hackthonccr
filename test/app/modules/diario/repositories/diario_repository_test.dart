@@ -1,13 +1,11 @@
+import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:dio/dio.dart';
-
-import 'package:hackthonccr/app/modules/diario/repositories/diario_repository.dart';
 
 class MockClient extends Mock implements Dio {}
 
 void main() {
-  DiarioRepository repository;
+  //DiarioRepository repository;
   // MockClient client;
 
   setUp(() {

@@ -5,9 +5,9 @@ import 'package:hackthonccr/app/modules/extrato_pontos/widgets/item_acumulo_pont
 import 'package:hackthonccr/app/shared/widgets/line_grid/line_grid.dart';
 import 'package:hackthonccr/app/shared/widgets/rounded_panel/rounded_panel_widget.dart';
 import 'package:hackthonccr/app/shared/widgets/title/title_widget.dart';
-import 'extrato_carteira_controller.dart';
+
 import '../../shared/widgets/selectable_label/selectable_label.dart';
-import '../../shared/widgets/meus_pontos/meus_pontos_widget.dart';
+import 'extrato_carteira_controller.dart';
 
 class ExtratoCarteiraPage extends StatefulWidget {
   final String title;
