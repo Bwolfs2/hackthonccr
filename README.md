@@ -7,6 +7,7 @@ Caso o link da PlayStore  esteja quebrado voce pode baixar direto do Github clic
 [<img src="https://spemer.com/img/works/jekyll/github.png"  width=150>](hhttps://github.com/Bwolfs2/hackthonccr/raw/master/Journi.apk)
 
 
+Veja o nosso site: https://journi.com.br/
 
 
 <img src="https://github.com/Bwolfs2/hackthonccr/blob/master/apresentacao/01.png">
