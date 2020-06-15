@@ -12,15 +12,3 @@ Veja o nosso site: https://journi.com.br/
 Youtube:
 
 [![Journi](http://img.youtube.com/vi/yJ4keF-gDQQ/0.jpg)](http://www.youtube.com/watch?v=yJ4keF-gDQQ "Journi")
-
-
-<img src="https://github.com/Bwolfs2/hackthonccr/blob/master/apresentacao/01.png">
-<img src="https://github.com/Bwolfs2/hackthonccr/blob/master/apresentacao/02.png">
-<img src="https://github.com/Bwolfs2/hackthonccr/blob/master/apresentacao/03.png">
-<img src="https://github.com/Bwolfs2/hackthonccr/blob/master/apresentacao/04.png">
-<img src="https://github.com/Bwolfs2/hackthonccr/blob/master/apresentacao/05.png">
-<img src="https://github.com/Bwolfs2/hackthonccr/blob/master/apresentacao/06.png">
-<img src="https://github.com/Bwolfs2/hackthonccr/blob/master/apresentacao/07.png">
-<img src="https://github.com/Bwolfs2/hackthonccr/blob/master/apresentacao/08.png">
-<img src="https://github.com/Bwolfs2/hackthonccr/blob/master/apresentacao/09.png">
-<img src="https://github.com/Bwolfs2/hackthonccr/blob/master/apresentacao/10.png">
