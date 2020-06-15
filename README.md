@@ -11,4 +11,4 @@ Veja o nosso site: https://journi.com.br/
 
 Youtube:
 
-[![Journi](http://img.youtube.com/vi/yJ4keF-gDQQ/0.jpg)](http://www.youtube.com/watch?v=yJ4keF-gDQQ "Journi")
+[![Journi](http://img.youtube.com/vi/U6O3xdqbce8/0.jpg)](http://www.youtube.com/watch?v=U6O3xdqbce8 "Journi")
