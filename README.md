@@ -9,6 +9,10 @@ Caso o link da PlayStore  esteja quebrado voce pode baixar direto do Github clic
 
 Veja o nosso site: https://journi.com.br/
 
+Youtube:
+
+[![Journi](http://img.youtube.com/vi/yJ4keF-gDQQ/0.jpg)](http://www.youtube.com/watch?v=yJ4keF-gDQQ "Journi")
+
 
 <img src="https://github.com/Bwolfs2/hackthonccr/blob/master/apresentacao/01.png">
 <img src="https://github.com/Bwolfs2/hackthonccr/blob/master/apresentacao/02.png">
